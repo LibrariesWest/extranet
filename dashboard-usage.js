@@ -1,5 +1,6 @@
 jQuery(function () {
 
+    // Chart 1: Number of issues by authority.
     Papa.parse(issuesurl, {
         download: true,
         complete: function (results) {
@@ -55,6 +56,7 @@ jQuery(function () {
         }
     });
 
+    // Chart 2: Number of issues by library.
     Papa.parse(issuesbylibraryurl, {
         download: true,
         complete: function (results) {
@@ -99,6 +101,26 @@ jQuery(function () {
         }
     });
 
+    // Chart 3: Number of issues by Ward.
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZHhyb3dlIiwiYSI6ImNqMnI5Y2p2cDAwMHQzMm11cjZlOGQ2b2oifQ.uxhJoz3QCO6cARRQ8uKdzw';
+    var map = new mapboxgl.Map({
+        container: 'map-issues-ward',
+        style: 'mapbox://styles/mapbox/light-v9',
+            zoom: 12,
+            center: [-122.447303, 37.753574]
+    });
+
+    var wards = L.mapbox.featureLayer()
+    .loadURL(issuesbywardurl)
+    .on('ready', function() {
+        wards.eachLayer(function(layer) {
+            layer.bindPopup(layer.features.properties.name);
+            layer.setStyle({ color: '#ccc' });
+        });
+    })
+    .addTo(map);
+
+    // Chart 4: Number of holds by authority.
     Papa.parse(holdsurl, {
         download: true,
         complete: function (results) {

@@ -10,6 +10,11 @@ var colours = {
     'Bristol': { colour: [255, 204, 0] }
 };
 
+// Usage page URLs
 var issuesurl = rootdataurl + 'issues.csv';
 var issuesbylibraryurl = rootdataurl + 'issuesbylibrary.csv';
+var issuesbywardurl = rootdataurl + 'issuesbyward.geojson';
 var holdsurl = rootdataurl + 'holds.csv';
+
+// Stock movement URLs
+var longtransitsurl = rootdataurl + 'longtransits.csv';
