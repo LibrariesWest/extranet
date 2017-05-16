@@ -10,10 +10,20 @@ var colours = {
     'Bristol': { colour: [255, 204, 0] }
 };
 
+var libtoauth = {
+    'BN': 'Bath and North East Somerset',
+    'SO': 'Somerset',
+    'NS': 'North Somerset',
+    'SG': 'South Gloucestershire',
+    'DO': 'Dorset',
+    'PO': 'Poole',
+    'BS': 'Bristol'
+};
+
 // Usage page URLs
 var issuesurl = rootdataurl + 'issues.csv';
 var issuesbylibraryurl = rootdataurl + 'issuesbylibrary.csv';
-var issuesbywardurl = rootdataurl + 'issuesbyward.geojson';
+var issuesbywardurl = rootdataurl + 'issuesbyward.json';
 var holdsurl = rootdataurl + 'holds.csv';
 
 // Stock movement URLs

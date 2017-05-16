@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LibrariesWest Data</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css'>
+    <link rel='stylesheet' href="https://api.mapbox.com/mapbox.js/v3.1.0/mapbox.css">
 </head>
 <body>
     <div class="container">
@@ -19,19 +19,17 @@
         <canvas id="cht-issues-library" height="100"></canvas>
         <h3>Issues by ward</h3>
         <p>Number of issues for the previous 12 months, separated by user ward.</p>
-        <div id="map-issues-ward" style="height: 300px;">
+        <div id="map-issues-ward" style="height: 300px;"></div>
         <h3>Holds by authority</h3>
         <p>Holds placed per month for the previous 12 months, separated by authority. </p>
         <canvas id="cht-holds" height="100"></canvas>
-        <h3>Popular items</h3>
-        <p>Most popular items from the last 3 months.</p>
-        <canvas id="cht-popular-items" height="100"></canvas>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox.js/v3.1.0/mapbox.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.2.0/papaparse.min.js"></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js'></script>
+
     <script src="chart-config.js"></script>
     <script src="dashboard-usage.js"></script>
 </body>
