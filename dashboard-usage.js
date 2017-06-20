@@ -9,30 +9,37 @@ jQuery(function () {
             var authorities = [];
             var datasets = [];
             var labels = [];
+            var datatable = [];
 
             jQuery.each(results.data, function (i, r) {
                 if (r['month'] && !months[r['month']]) months[r['month']] = {};
                 if (r['month'] && !months[r['month']][r['authority']]) months[r['month']][r['authority']] = r['issues'];
                 if (labels.indexOf(r['month']) == -1 && r['month']) labels.push(r['month']);
                 if (authorities.indexOf(r['authority']) == -1 && r['authority']) authorities.push(r['authority']);
+                if (r['authority'] != '') datatable.push([r['authority'], r['month'], r['issues']]);
+            });
+
+            $('#tbl-issues').DataTable({
+                data: datatable,
+                columns: [
+                    {
+                        title: 'Authority'
+                    },
+                    {
+                        title: 'Month',
+                        render: function (data, type, row) {
+                            return moment(data).format('MMM YY');
+                        }
+                    },
+                    { title: 'Issues' },
+                ]
             });
 
             jQuery.each(authorities, function (i, a) {
                 datasets.push({
-                    fill: false,
-                    lineTension: 0.1,
-                    backgroundColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',0.4)',
-                    borderColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',1)',
-                    borderWidth: 0.5,
-                    pointBorderColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',1)',
-                    pointBackgroundColor: "#fff",
-                    pointBorderWidth: 0.5,
-                    pointHoverRadius: 5,
-                    pointHoverBackgroundColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',1)',
-                    pointHoverBorderColor: "rgba(220,220,220,1)",
-                    pointHoverBorderWidth: 1,
-                    pointRadius: 1,
-                    pointHitRadius: 10,
+                    backgroundColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ', 0.3)',
+                    borderColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ', 0.8)',
+                    borderWidth: 1,
                     spanGaps: false,
                     label: a,
                     data: jQuery.map(labels.sort(), function (m, i) { return months[m][a] })
@@ -49,7 +56,14 @@ jQuery(function () {
                 options:
                 {
                     scales: {
-                        xAxes: [{ scaleLabel: { display: true, labelString: 'Month' } }],
+                        xAxes: [{
+                            scaleLabel: { display: true, labelString: 'Month' },
+                            ticks: {
+                                callback: function (value, index, values) {
+                                    return moment(value).format('MMMM YY');
+                                }
+                            }
+                        }],
                         yAxes: [{ scaleLabel: { display: true, labelString: 'Number of Issues' } }]
                     }
                 }
@@ -64,36 +78,59 @@ jQuery(function () {
         complete: function (results) {
             var datasets = [];
             var authorities = [];
+            var datatable = [];
 
             jQuery.each(results.data, function (i, r) {
-                var auth = libtoauth[r['library'].substring(0, 2)]; 
+                var auth = libtoauth[r['library'].substring(0, 2)];
                 if (authorities.indexOf(auth) == -1 && auth) authorities.push(auth);
+                datatable.push([auth, r['library'], r['month'], r['issues']]);
+            });
+
+            $('#tbl-issues-library').DataTable({
+                data: datatable,
+                columns: [
+                    {
+                        title: 'Authority'
+                    },
+                    {
+                        title: 'Library'
+                    },
+                    {
+                        title: 'Month',
+                        render: function (data, type, row) {
+                            return moment(data).format('MMM YY');
+                        }
+                    },
+                    { title: 'Issues' },
+                ]
             });
 
             jQuery.each(authorities, function (i, a) {
                 datasets.push({
                     fill: false,
-                    lineTension: 0.1,
-                    borderWidth: 0.5,
-                    backgroundColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',0.5)',
+                    borderWidth: 1,
+                    backgroundColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ', 0.3)',
+                    borderColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ', 0.7)',
                     spanGaps: true,
                     label: a,
                     data: jQuery.map(results.data, function (l, i) {
                         var auth = libtoauth[l['library'].substring(0, 2)];
-                        if (l['library'] != '' && auth == a) {
-                            return l['issues']
-                        } else {
-                            return 0;
+                        if (l['issues'] >= 50000) {
+                            if (l['library'] != '' && auth == a) {
+                                return l['issues']
+                            } else {
+                                return 0;
+                            }
                         }
                     })
                 });
             });
-            
+
             var chI = document.getElementById("cht-issues-library");
             var chtIssues = new Chart(chI, {
                 type: 'bar',
                 data: {
-                    labels: jQuery.map(results.data, function (l, i) { return l['library'] }),
+                    labels: jQuery.map(results.data, function (l, i) { if (l['issues'] >= 50000) return l['library'] }),
                     datasets: datasets
                 },
                 options:
@@ -110,8 +147,7 @@ jQuery(function () {
 
     // Chart 3: Number of issues by Ward.
     L.mapbox.accessToken = 'pk.eyJ1IjoiZHhyb3dlIiwiYSI6ImNqMnI5Y2p2cDAwMHQzMm11cjZlOGQ2b2oifQ.uxhJoz3QCO6cARRQ8uKdzw';
-    var map = L.mapbox.map('map-issues-ward', 'mapbox.light')
-        .setView([50.97, -2.76], 9);
+    var map = L.mapbox.map('map-issues-ward', 'mapbox.light').setView([50.97, -2.76], 8);
 
     var wards = L.mapbox.featureLayer()
         .loadURL(issuesbywardurl)
@@ -152,7 +188,7 @@ jQuery(function () {
                     fill: false,
                     lineTension: 0.1,
                     backgroundColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',0.4)',
-                    borderColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',1)',
+                    borderColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',0.9)',
                     borderWidth: 0.5,
                     pointBorderColor: 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',1)',
                     pointBackgroundColor: "#fff",

@@ -6,30 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LibrariesWest Data</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel='stylesheet' href="https://api.mapbox.com/mapbox.js/v3.1.0/mapbox.css">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/v3.1.0/mapbox.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" />
 </head>
 <body>
     <div class="container">
         <h2>Usage</h2>
         <h3>Issues by authority</h3>
-        <p>Number of issues per month for the previous 12 months, separated by issuing authority.</p>
-        <canvas id="cht-issues" height="100"></canvas>
+        <hr />
+        <p>Number of issues per month for the previous 6 months, separated by issuing authority.  An issue is the lending of a physical item to a borrower.  <strong>Authority</strong> is the library authority the physical item was loaned at. <strong>Month</strong> is the month of the activity. <strong>Issues</strong> is a count of the number of issues for that month and library.</p>
+        <canvas id="cht-issues" height="65"></canvas>
+        <table id="tbl-issues"></table>
         <h3>Issues by library</h3>
-        <p>Number of issues for the previous 12 months, separated by issuing library.</p>
-        <canvas id="cht-issues-library" height="100"></canvas>
+        <hr />
+        <p>Number of issues for the previous 6 months, separated by issuing library.  Libraries with less than 50,000 annual issues are not displayed in the graph but are in the data table below.</p>
+        <canvas id="cht-issues-library" height="65"></canvas>
+        <table id="tbl-issues-library"></table>
         <h3>Issues by ward</h3>
-        <p>Number of issues for the previous 12 months, separated by user ward.</p>
+        <hr />
+        <p>Number of issues for the previous 6 months, separated by the ward of the user's home address.  Darker shading represents more issues.  Click on a Ward to see further details.</p>
         <div id="map-issues-ward" style="height: 300px;"></div>
         <h3>Holds by authority</h3>
-        <p>Holds placed per month for the previous 12 months, separated by authority. </p>
-        <canvas id="cht-holds" height="100"></canvas>
+        <hr />
+        <p>Holds placed per month for the previous 6 months, separated by authority. </p>
+        <canvas id="cht-holds" height="65"></canvas>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://api.mapbox.com/mapbox.js/v3.1.0/mapbox.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.2.0/papaparse.min.js"></script>
-
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="chart-config.js"></script>
     <script src="dashboard-usage.js"></script>
 </body>

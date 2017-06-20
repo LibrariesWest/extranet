@@ -1,4 +1,4 @@
-﻿var rootdataurl = 'data/';
+﻿var rootdataurl = '/data/';
 
 var colours = {
     'Bath and North East Somerset': { colour: [37, 164, 69] },
