@@ -11,28 +11,64 @@
 <body>
     <div class="container">
         <p>The data pages are where we will share regular data exports from the Library Management System, as well as visualisations of this data.</p>
+        <h4>Bills and Payments</h4>
+        <p>Data on charges incurred and payments taken within libraries</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td><a>Bills by estimated deprivation</a></td>
+                    <td>Breakdown of bills incurred in last year, separated by authority billed and estimated deprivation index of borrower</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Bills by reason and authority</a></td>
+                    <td>Breakdown of bills incurred in last year, separated by bill reason and authority</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Bills by reason and library</a></td>
+                    <td>Breakdown of bills incurred in last year, separated by bill reason and library</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Payments taken by authority</a></td>
+                    <td>Breakdown of payments taken per month, separated by authority</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Payments taken by library</a></td>
+                    <td>Breakdown of payments taken per month, separated by library</td>
+                    <td><a>Download</a></td>
+                </tr>
+            </tbody>
+        </table>
         <h4>Collection Central</h4>
         <p>Collection and stock intelligence.</p>
         <table>
             <tbody>
                 <tr>
-                    <td><a>Items by type and authority</a></td>
+                    <td><a href="collection-booksonprescription">Books on prescription</a></td>
+                    <td>Stats from items that are marked as B-O-P</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a href="collection-itemsbytypeandauthority">Items by type and authority</a></td>
                     <td>Number of items separated by type and owning authority</td>
                     <td><a>Download</a></td>
                 </tr>
                 <tr>
-                    <td><a>Items by type and library</a></td>
+                    <td><a href="collection-itemsbytypeandlibrary">Items by type and library</a></td>
                     <td>Number of items separated by type and owning library</td>
                     <td><a>Download</a></td>
                 </tr>
                 <tr>
-                    <td><a>100 Most issued items</a></td>
+                    <td><a href="collection-mostissueditems">100 Most issued items</a></td>
                     <td>Items that have been issued the most times</td>
                     <td><a>Download</a></td>
                 </tr>
                 <tr>
-                    <td><a>100 Most issued titles</a></td>
-                    <td>Titles that have been issued the most times in the past 6 months.</td>
+                    <td><a href="collection-mostravelleditems">100 Most travelled titles</a></td>
+                    <td>Titles that have travelled around the authority the most times.</td>
                     <td><a>Download</a></td>
                 </tr>
             </tbody>
@@ -41,6 +77,41 @@
         <p>Data on our registered members.</p>
         <table>
             <tbody>
+                <tr>
+                    <td><a>Borrowers by authority</a></td>
+                    <td>Number of borrowers active in last year, separated by borrowing authority</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Borrowers by authority and deprivation</a></td>
+                    <td>Number of borrowers active in last year, separated by local authority and estimated deprivation index of the borrowers</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Borrowers by library</a></td>
+                    <td>Number of borrowers active in last year, separated by borrowing library</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Borrowers by library and deprivation</a></td>
+                    <td>Number of borrowers active in last year, separated by library and estimated deprivation index of the borrowers</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Borrowers by ward</a></td>
+                    <td>Number of borrowers active in last year, separated by local authority ward</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Active members by authority</a></td>
+                    <td>Number of members active in the last year, separated by registration authority</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Active members by library</a></td>
+                    <td>Number of members active in the last year, separated by registration library</td>
+                    <td><a>Download</a></td>
+                </tr>
                 <tr>
                     <td><a>Members by registered authority</a></td>
                     <td>Number of registered members, separated by registration authority.</td>
@@ -56,39 +127,20 @@
                     <td>Number of registered members, separated by local authority ward</td>
                     <td><a>Download</a></td>
                 </tr>
+            </tbody>
+        </table>
+        <h4>Movement of stock</h4>
+        <p>Data on stock moving about (transits).</p>
+        <table>
+            <tbody>
                 <tr>
-                    <td><a>Active members by authority</a></td>
-                    <td>Number of members active in the last year, separated by registration authority</td>
+                    <td><a>Transits by item authority</a></td>
+                    <td>Number of current transits, separated by item authority.</td>
                     <td><a>Download</a></td>
                 </tr>
                 <tr>
-                    <td><a>Active members by library</a></td>
-                    <td>Number of members active in the last year, separated by registration library</td>
-                    <td><a>Download</a></td>
-                </tr>
-                <tr>
-                    <td><a>Active borrowers by authority</a></td>
-                    <td>Number of borrowers active in last year, separated by borrowing authority</td>
-                    <td><a>Download</a></td>
-                </tr>
-                <tr>
-                    <td><a>Active borrowers by library</a></td>
-                    <td>Number of borrowers active in last year, separated by borrowing library</td>
-                    <td><a>Download</a></td>
-                </tr>
-                <tr>
-                    <td><a>Active borrowers by ward</a></td>
-                    <td>Number of borrowers active in last year, separated by local authority ward</td>
-                    <td><a>Download</a></td>
-                </tr>
-                <tr>
-                    <td><a>Active borrowers by authority and deprivation</a></td>
-                    <td>Number of borrowers active in last year, separated by local authority and estimated deprivation index of the borrowers</td>
-                    <td><a>Download</a></td>
-                </tr>
-                <tr>
-                    <td><a>Active borrowers by library and deprivation</a></td>
-                    <td>Number of borrowers active in last year, separated by library and estimated deprivation index of the borrowers</td>
+                    <td><a>Transits over 6 weeks</a></td>
+                    <td>Current transits over 6 weeks, with full details.</td>
                     <td><a>Download</a></td>
                 </tr>
             </tbody>
@@ -98,23 +150,43 @@
         <table>
             <tbody>
                 <tr>
+                    <td><a>Fulfilled reservations by authority</a></td>
+                    <td>Number of reservations fulflled in last year, separated by item authority, month, and days to fulfill</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Fulfilled reservations by authority internal/external</a></td>
+                    <td>Number of reservations fulfilled in last year, separated by item authority and whether the reservation was filled within the authority or from a different authority</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Fulfilled reservations by library</a></td>
+                    <td>Number of reservations fulflled in last year, separated by item library, month, and days to fulfill</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
                     <td><a>Reservations by authority</a></td>
-                    <td>Number of reservations placed in last year, separated by selected pickup authority.</td>
-                    <td><a>Download</a></td>
-                </tr>
-                <tr>
-                    <td><a>Reservations by library</a></td>
-                    <td>Number of reservations placed in last year, separated by selected pickup library</td>
-                    <td><a>Download</a></td>
-                </tr>
-                <tr>
-                    <td><a>Fulfilled reservations by internal/external</a></td>
-                    <td>Number of reservations placed in last year, separated by selected pickup authority and whether the reservation was filled within the authority or from a different authority</td>
+                    <td>Number of reservations placed in last year, separated by pickup authority.</td>
                     <td><a>Download</a></td>
                 </tr>
                 <tr>
                     <td><a>Reservations by client</a></td>
-                    <td>Number of reservations placed in last year, separated by selected pickup authority and client used (Web/App/WorkFlows)</td>
+                    <td>Number of reservations placed in last year, separated by pickup authority and client used (Web/App/WorkFlows)</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Reservations by library</a></td>
+                    <td>Number of reservations placed in last year, separated by pickup library</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Reservations by ward</a></td>
+                    <td>Number of reservations placed in last year, separated by local authority ward</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
+                    <td><a>Reservations over 6 weeks</a></td>
+                    <td>List of all reservations that were placed over 6 weeks ago.</td>
                     <td><a>Download</a></td>
                 </tr>
                 <tr>
@@ -139,6 +211,11 @@
                     <td><a>Download</a></td>
                 </tr>
                 <tr>
+                    <td><a>Number of loans by authority and deprivation</a></td>
+                    <td>Number of loans for the last year, separated by issuing authority, and the estimated borrowers deprivation index</td>
+                    <td><a>Download</a></td>
+                </tr>
+                <tr>
                     <td><a>Number of loans by library</a></td>
                     <td>Number of loans for the last year, separated by issuing library</td>
                     <td><a>Download</a></td>
@@ -146,11 +223,6 @@
                 <tr>
                     <td><a>Number of loans by ward</a></td>
                     <td>Number of loans for the last year, separated by the borrowers local authority ward</td>
-                    <td><a>Download</a></td>
-                </tr>
-                <tr>
-                    <td><a>Number of loans by authority and deprivation</a></td>
-                    <td>Number of loans for the last year, separated by issuing authority, and the estimated borrowers deprivation index</td>
                     <td><a>Download</a></td>
                 </tr>
                 <tr>
@@ -171,32 +243,6 @@
                 <tr>
                     <td><a>Number of renewals by authority and deprivation</a></td>
                     <td>Number of renewals for the last year, separated by issuing authority, and the estimated borrowers deprivation index</td>
-                    <td><a>Download</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <h4>Bills and Payments</h4>
-        <p>Data on charges incurred and payments taken within libraries</p>
-        <table>
-            <tbody>
-                <tr>
-                    <td><a>Bills by reason and authority</a></td>
-                    <td>Breakdown of bills incurred in last year, separated by bill reason and authority</td>
-                    <td><a>Download</a></td>
-                </tr>
-                <tr>
-                    <td><a>Bills by reason and library</a></td>
-                    <td>Breakdown of bills incurred in last year, separated by bill reason and library</td>
-                    <td><a>Download</a></td>
-                </tr>
-                <tr>
-                    <td><a>Bills by estimated deprivation</a></td>
-                    <td>Breakdown of bills incurred in last year, separated by estimated deprivation index of borrower</td>
-                    <td><a>Download</a></td>
-                </tr>
-                <tr>
-                    <td><a>Payments taken by library</a></td>
-                    <td>Breakdown of payments taken per month, separated by library</td>
                     <td><a>Download</a></td>
                 </tr>
             </tbody>
