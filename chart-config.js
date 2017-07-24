@@ -20,6 +20,9 @@ var libtoauth = {
     'BS': 'Bristol'
 };
 
+// Bills URLs
+
+
 // Usage page URLs
 var issuesurl = rootdataurl + 'issues.csv';
 var issuesbylibraryurl = rootdataurl + 'issuesbylibrary.csv';
