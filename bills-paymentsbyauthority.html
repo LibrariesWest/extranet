@@ -4,17 +4,52 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LibrariesWest Data</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Payments By Authority | Payments</title>
 </head>
 <body>
     <div class="container">
-        <h1>Catalogue</h1>
+        <h1>Payments By Authority</h1>
+        <p>Payments taken, grouped by authority paid and payment type</p>
+        <hr />
+        <div class="container"><canvas id="cht-bills-paymentsbyauthority" height="75"></canvas></div>
+        <hr />
+        <table>
+            <thead>
+                <tr>
+                    <th>Column</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Authority</td>
+                    <td>The authority that took the payment</td>
+                </tr>
+                <tr>
+                    <td>Payment Type</td>
+                    <td>The payment type used e.g. 'Cash'. Remember that 'Cancelled' and 'Forgiven' are also payment types</td>
+                </tr>
+                <tr>
+                    <td>Number of payments</td>
+                    <td>The number of payments that make up this grouping</td>
+                </tr>
+                <tr>
+                    <td>Total paid</td>
+                    <td>The total amount paid in this grouping</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <table id="tbl-bills-paymentsbyauthority"></table>
     </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.2.0/papaparse.min.js"></script>
-    <script src="dashboard-catalogue.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="chart-config.js"></script>
+    <script src="bills-paymentsbyauthority.js"></script>
 </body>
 </html>

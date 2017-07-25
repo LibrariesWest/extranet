@@ -1,66 +1,58 @@
 jQuery(function () {
-
-    var rootdataurl = 'data/';
-
-    var colours = {
-        'Bath and North East Somerset': { line: '#25A445', background: '#25A445' },
-        'Somerset': { line: '#B80050', background: '#B80050' },
-        'North Somerset': { line: '#CEF5F2', background: '#CEF5F2' },
-        'South Gloucestershire': { line: '#000A8B', background: '#000A8B' },
-        'Dorset': { line: '#EF9B1F', background: '#EF9B1F' },
-        'Poole': { line: '#0094AA', background: '#0094AA' },
-        'Bristol': { line: '#FFCC00', background: '#FFCC00' } 
-    };
-
-    var issuesurl = rootdataurl + 'issues.csv';
-    var holdsurl = rootdataurl + 'holds.csv';
-    var residentsurl = rootdataurl + 'residentusers.csv';
-
-    Papa.parse(issuesurl, {
+    Papa.parse(paymentsbyauthorityurl, {
+        header: true,
         download: true,
-        complete: function(results) {
-            var authorities = {};
+        complete: function (results) {
+            var autho = {};
             var datasets = [];
             var labels = [];
-            
-            jQuery.each(results.data, function(i, r){
-                if (labels.indexOf(r[1]) == -1 && r[1]) labels.push(r[1]);
-                if (!authorities[r[0]] && r[0] != '') authorities[r[0]] = [];
-                if (r[0] != '' && r[2] != '') authorities[r[0]].push(r[2]);
+            var tabledata = [];
+
+            jQuery.each(results.data, function (i, r) {
+                if (labels.indexOf(r.reason) == -1 && r.reason) labels.push(r.reason);
+                if (!libraries[r.library] && r.library != '') libraries[r.library] = [];
+                if (r.library != '' && r.number_of_bills != '') libraries[r.library].push(r.number_of_bills);
+                tabledata.push([r.library, r.reason, r.number_of_bills, r.total_billed]);
             });
 
-            jQuery.each(Object.keys(authorities), function(i, a){
-                datasets.push({ label: a, data: authorities[a], fill: false, borderColor: (colours[a].line || '#ccc'), backgroundColor: (colours[a].line || '#ccc') });
+            jQuery.each(Object.keys(libraries), function (i, a) {
+                var auth = libtoauth[a.substring(0, 2)];
+                var linecolour = colours[auth] ? 'rgba(' + colours[auth].colour[0] + ',' + colours[auth].colour[1] + ',' + colours[auth].colour[2] + ',1)' : '#ccc';
+                var bgcolour = colours[auth] ? 'rgba(' + colours[auth].colour[0] + ',' + colours[auth].colour[1] + ',' + colours[auth].colour[2] + ',0.2)' : '#ccc';
+                datasets.push({ label: a, data: libraries[a], borderWidth: 1, borderColor: linecolour, backgroundColor: bgcolour });
             });
 
-            var chI = document.getElementById("cht-issues");
-            var chtIssues = new Chart(chI, {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: datasets
-                }
-            });
-        }
-    });
-
-    Papa.parse(residentsurl, {
-        download: true,
-        complete: function(results) {
-            var data = [];
-            var labels = [];
-            jQuery.each(results.data, function(i, r){
-                if (r[0]) labels.push(r[0]);
-                if (r[3]) data.push(r[3]);
-            });
-            
-            var chI = document.getElementById("cht-residents");
-            var chtIssues = new Chart(chI, {
+            var chI = document.getElementById('cht-bills-billsbyreasonlibrary');
+            var cht = new Chart(chI, {
                 type: 'bar',
                 data: {
                     labels: labels,
-                    datasets: [{ data: data }]
+                    datasets: datasets
+                },
+                scales: {
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Reason'
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Number of bills'
+                        }
+                    }]
                 }
+            });
+
+            $('#tbl-bills-billsbyreasonlibrary').DataTable({
+                data: tabledata,
+                columns: [
+                    { title: 'Library' },
+                    { title: 'Reason' },
+                    { title: 'Number of bills' },
+                    { title: 'Total billed' }
+                ]
             });
         }
     });

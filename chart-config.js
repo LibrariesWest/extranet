@@ -1,12 +1,12 @@
-﻿var rootdataurl = '/data/';
+﻿var rootdataurl = '/testdata/';
 
 var colours = {
-    'Bath and North East Somerset': { colour: [37, 164, 69] },
-    'Somerset': { colour: [184, 0, 80] },
-    'North Somerset': { colour: [206, 245, 242] },
-    'South Gloucestershire': { colour: [0, 10, 139] },
-    'Dorset': { colour: [239, 155, 31] },
-    'Poole': { colour: [0, 148, 170] },
+    'Bath and North East Somerset': { colour: [255, 99, 132] },
+    'Somerset': { colour: [54, 162, 235] },
+    'North Somerset': { colour: [255, 206, 86] },
+    'South Gloucestershire': { colour: [75, 192, 192] },
+    'Dorset': { colour: [153, 102, 255] },
+    'Poole': { colour: [255, 159, 64] },
     'Bristol': { colour: [255, 204, 0] }
 };
 
@@ -21,13 +21,13 @@ var libtoauth = {
 };
 
 // Bills URLs
+var billsbydeprivationurl = rootdataurl + 'bills_billsbydeprivation.csv';
+var billsbyreasonauthorityurl = rootdataurl + 'bills_billsbyreasonauthority.csv';
+var billsbyreasonlibraryurl = rootdataurl + 'bills_billsbyreasonlibrary.csv';
+var paymentsbyauthorityurl = rootdataurl + 'bills_paymentsbyauthority.csv';
+
+// Usage URLs
 
 
-// Usage page URLs
-var issuesurl = rootdataurl + 'issues.csv';
-var issuesbylibraryurl = rootdataurl + 'issuesbylibrary.csv';
-var issuesbywardurl = rootdataurl + 'issuesbyward.json';
-var holdsurl = rootdataurl + 'holds.csv';
+// Movement URLs
 
-// Stock movement URLs
-var longtransitsurl = rootdataurl + 'longtransits.csv';
