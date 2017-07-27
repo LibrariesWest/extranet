@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LibrariesWest Data</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" />
 </head>
 <body>
     <div class="container">
@@ -18,27 +17,27 @@
                 <tr>
                     <td><a href="bills-billsbydeprivation">Bills by estimated deprivation</a></td>
                     <td>Bills incurred in last year, grouped by billing authority, bill reason, and estimated deprivation index of borrower</td>
-                    <td><a href="bills-billsbydeprivation.csv">Download</a></td>
+                    <td><a class="data-link" href="bills_billsbydeprivation.csv">Download</a></td>
                 </tr>
                 <tr>
                     <td><a href="bills-billsbyreasonauthority">Bills by reason and authority</a></td>
                     <td>Bills incurred in last year, grouped by bill reason and billing authority</td>
-                    <td><a href="bills-billsbyreasonauthority.csv">Download</a></td>
+                    <td><a class="data-link" href="bills_billsbyreasonauthority.csv">Download</a></td>
                 </tr>
                 <tr>
                     <td><a href="bills-billsbyreasonlibrary">Bills by reason and library</a></td>
                     <td>Bills incurred in last year, grouped by bill reason, billing authority, and billing library</td>
-                    <td><a href="bills-billsbyreasonlibrary.csv">Download</a></td>
+                    <td><a class="data-link" href="bills_billsbyreasonlibrary.csv">Download</a></td>
                 </tr>
                 <tr>
                     <td><a href="bills-paymentsbyauthority">Payments taken by authority</a></td>
                     <td>Payments taken in last year, grouped by authority paid and payment type</td>
-                    <td><a href="bills-paymentsbyauthority.csv">Download</a></td>
+                    <td><a class="data-link" href="bills_paymentsbyauthority.csv">Download</a></td>
                 </tr>
                 <tr>
-                    <td><a href="bills-paymentsbylibrary.csv">Payments taken by library</a></td>
+                    <td><a href="bills-paymentsbylibrary">Payments taken by library</a></td>
                     <td>Payments taken in last year, grouped by authority paid, library paid, and payment type</td>
-                    <td><a href="bills-paymentsbylibrary.csv">Download</a></td>
+                    <td><a class="data-link" href="bills_paymentsbylibrary.csv">Download</a></td>
                 </tr>
             </tbody>
         </table>
@@ -249,6 +248,7 @@
         </table>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="chart-config.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

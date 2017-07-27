@@ -12,7 +12,7 @@ jQuery(function () {
                 if (labels.indexOf(r.reason) == -1 && r.reason) labels.push(r.reason);
                 if (!authorities[r.authority] && r.authority != '') authorities[r.authority] = [];
                 if (r.authority != '' && r.number_of_bills != '') authorities[r.authority].push(r.number_of_bills);
-                tabledata.push([r.authority, r.reason, r.number_of_bills, r.total_billed]);
+                if (r.authority != '' && r.number_of_bills != '') tabledata.push([r.authority, r.reason, r.number_of_bills, r.total_billed]);
             });
 
             jQuery.each(Object.keys(authorities), function (i, a) {
