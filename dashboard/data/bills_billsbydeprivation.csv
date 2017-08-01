@@ -1,0 +1,553 @@
+authority,reason,imd_decile,number_of_bills,total_billed
+Bath and North East Somerset,BFR,1,1,2.5
+Bath and North East Somerset,BFR,2,5,3.6
+Bath and North East Somerset,BFR,3,1,2.5
+Bath and North East Somerset,BFR,5,4,8.5
+Bath and North East Somerset,BFR,6,2,3.4
+Bath and North East Somerset,BFR,7,2,3.2
+Bath and North East Somerset,BFR,8,3,5.2
+Bath and North East Somerset,BFR,9,1,0.1
+Bath and North East Somerset,BFR,10,5,20.29
+Bath and North East Somerset,CHARGE,1,25,43.6
+Bath and North East Somerset,CHARGE,2,85,147.0
+Bath and North East Somerset,CHARGE,3,608,1075.4
+Bath and North East Somerset,CHARGE,4,494,925.4
+Bath and North East Somerset,CHARGE,5,1936,3567.8
+Bath and North East Somerset,CHARGE,6,528,977.8
+Bath and North East Somerset,CHARGE,7,484,889.0
+Bath and North East Somerset,CHARGE,8,1761,3241.4
+Bath and North East Somerset,CHARGE,9,1284,2318.4
+Bath and North East Somerset,CHARGE,10,2712,4947.6
+Bath and North East Somerset,DAMAGE,1,1,9.99
+Bath and North East Somerset,DAMAGE,2,1,5
+Bath and North East Somerset,DAMAGE,5,5,26.99
+Bath and North East Somerset,DAMAGE,6,2,11.99
+Bath and North East Somerset,DAMAGE,8,5,38.97
+Bath and North East Somerset,DAMAGE,9,3,10.0
+Bath and North East Somerset,DAMAGE,10,7,40.93
+Bath and North East Somerset,GROUP,5,1,1
+Bath and North East Somerset,GROUP,7,11,55
+Bath and North East Somerset,GROUP,9,10,50
+Bath and North East Somerset,GROUP,10,3,15
+Bath and North East Somerset,HOLD,2,30,232.5
+Bath and North East Somerset,HOLD,3,3,35
+Bath and North East Somerset,HOLD,4,1,25
+Bath and North East Somerset,HOLD,5,34,111.5
+Bath and North East Somerset,HOLD,6,2,50
+Bath and North East Somerset,HOLD,7,29,77
+Bath and North East Somerset,HOLD,8,47,185.5
+Bath and North East Somerset,HOLD,9,28,236.5
+Bath and North East Somerset,HOLD,10,50,460.0
+Bath and North East Somerset,ILL,2,4,23
+Bath and North East Somerset,LOST,1,2,4.99
+Bath and North East Somerset,LOST,2,4,27.47
+Bath and North East Somerset,LOST,3,4,33.48
+Bath and North East Somerset,LOST,4,9,45.97
+Bath and North East Somerset,LOST,5,26,161.48
+Bath and North East Somerset,LOST,6,6,24
+Bath and North East Somerset,LOST,7,8,15.1
+Bath and North East Somerset,LOST,8,25,156.89
+Bath and North East Somerset,LOST,9,26,134.86
+Bath and North East Somerset,LOST,10,49,345.23
+Bath and North East Somerset,LOSTCARD,1,1,2
+Bath and North East Somerset,LOSTCARD,2,5,10
+Bath and North East Somerset,LOSTCARD,3,9,14
+Bath and North East Somerset,LOSTCARD,4,13,24
+Bath and North East Somerset,LOSTCARD,5,22,36.5
+Bath and North East Somerset,LOSTCARD,6,3,3.5
+Bath and North East Somerset,LOSTCARD,7,7,10.5
+Bath and North East Somerset,LOSTCARD,8,26,49
+Bath and North East Somerset,LOSTCARD,9,18,34
+Bath and North East Somerset,LOSTCARD,10,15,28
+Bath and North East Somerset,OVERDUE,1,151,226.70
+Bath and North East Somerset,OVERDUE,2,721,1012.90
+Bath and North East Somerset,OVERDUE,3,1390,2113.50
+Bath and North East Somerset,OVERDUE,4,1360,998.85
+Bath and North East Somerset,OVERDUE,5,5080,5766.25
+Bath and North East Somerset,OVERDUE,6,1711,1625.35
+Bath and North East Somerset,OVERDUE,7,1222,1113.80
+Bath and North East Somerset,OVERDUE,8,6268,5781.50
+Bath and North East Somerset,OVERDUE,9,5050,4651.80
+Bath and North East Somerset,OVERDUE,10,9305,9155.15
+Bath and North East Somerset,PROCESSFEE,1,2,2.5
+Bath and North East Somerset,PROCESSFEE,2,4,10.0
+Bath and North East Somerset,PROCESSFEE,3,2,2.5
+Bath and North East Somerset,PROCESSFEE,4,9,22.5
+Bath and North East Somerset,PROCESSFEE,5,22,40.0
+Bath and North East Somerset,PROCESSFEE,6,6,12.49
+Bath and North East Somerset,PROCESSFEE,7,6,10.0
+Bath and North East Somerset,PROCESSFEE,8,20,40.0
+Bath and North East Somerset,PROCESSFEE,9,22,42.5
+Bath and North East Somerset,PROCESSFEE,10,38,82.0
+Bath and North East Somerset,SALENOVAT,2,10,21.4
+Bath and North East Somerset,SALENOVAT,3,10,137.3
+Bath and North East Somerset,SALENOVAT,4,5,4.5
+Bath and North East Somerset,SALENOVAT,5,7,17.7
+Bath and North East Somerset,SALENOVAT,6,34,29.15
+Bath and North East Somerset,SALENOVAT,7,3,14.8
+Bath and North East Somerset,SALENOVAT,8,10,43.89
+Bath and North East Somerset,SALENOVAT,9,7,61.8
+Bath and North East Somerset,SALENOVAT,10,7,9.2
+Bath and North East Somerset,SALEVAT,1,1,2.25
+Bath and North East Somerset,SALEVAT,2,43,41.36
+Bath and North East Somerset,SALEVAT,3,26,107.26
+Bath and North East Somerset,SALEVAT,4,11,24.56
+Bath and North East Somerset,SALEVAT,5,26,133.85
+Bath and North East Somerset,SALEVAT,6,34,18.73
+Bath and North East Somerset,SALEVAT,7,12,94.66
+Bath and North East Somerset,SALEVAT,8,16,40.43
+Bath and North East Somerset,SALEVAT,9,28,214.51
+Bath and North East Somerset,SALEVAT,10,22,158.45
+Bristol,BFR,1,3,21.79
+Bristol,BFR,3,2,9.84
+Bristol,BFR,4,1,10
+Bristol,CHARGE,1,2096,2461.2
+Bristol,CHARGE,2,2867,3366.2
+Bristol,CHARGE,3,3194,3958.5
+Bristol,CHARGE,4,2564,3159.6
+Bristol,CHARGE,5,3066,3364.3
+Bristol,CHARGE,6,3512,3835.3
+Bristol,CHARGE,7,5371,6248.3
+Bristol,CHARGE,8,4096,4940.7
+Bristol,CHARGE,9,3001,3592.5
+Bristol,CHARGE,10,3179,3886.9
+Bristol,DAMAGE,1,6,30
+Bristol,DAMAGE,2,7,43.99
+Bristol,DAMAGE,3,5,61
+Bristol,DAMAGE,4,3,15.99
+Bristol,DAMAGE,5,3,21.99
+Bristol,DAMAGE,6,10,66.97
+Bristol,DAMAGE,7,4,31
+Bristol,DAMAGE,8,1,10
+Bristol,DAMAGE,9,4,39.99
+Bristol,DAMAGE,10,3,19
+Bristol,GROUP,4,1,18
+Bristol,HOLD,1,13,47.0
+Bristol,HOLD,2,15,75
+Bristol,HOLD,3,7,26.5
+Bristol,HOLD,4,6,25.5
+Bristol,HOLD,5,4,15.5
+Bristol,HOLD,6,14,65.5
+Bristol,HOLD,7,14,70
+Bristol,HOLD,8,11,55
+Bristol,HOLD,9,1,5
+Bristol,HOLD,10,2,10
+Bristol,ILL,3,1,10
+Bristol,ILL,8,1,5
+Bristol,LOST,1,3157,17422.44
+Bristol,LOST,2,2121,11787.92
+Bristol,LOST,3,2711,14382.24
+Bristol,LOST,4,2057,10689.95
+Bristol,LOST,5,1487,8812.61
+Bristol,LOST,6,1923,9431.41
+Bristol,LOST,7,3131,15554.30
+Bristol,LOST,8,2101,10653.01
+Bristol,LOST,9,1136,6058.07
+Bristol,LOST,10,1709,8199.38
+Bristol,LOSTCARD,1,1,2
+Bristol,LOSTCARD,3,1,2
+Bristol,LOSTCARD,6,1,2
+Bristol,LOSTCARD,7,2,13
+Bristol,OVERDUE,1,6123,6923.75
+Bristol,OVERDUE,2,5757,6120.05
+Bristol,OVERDUE,3,8146,8363.10
+Bristol,OVERDUE,4,5838,6515.30
+Bristol,OVERDUE,5,6229,6000.30
+Bristol,OVERDUE,6,6491,6660.05
+Bristol,OVERDUE,7,9737,9641.00
+Bristol,OVERDUE,8,7472,7419.60
+Bristol,OVERDUE,9,4916,4826.95
+Bristol,OVERDUE,10,5525,5229.00
+Bristol,PRIVILEGE,3,1,1
+Bristol,PROCESSFEE,1,44,0
+Bristol,PROCESSFEE,2,61,0
+Bristol,PROCESSFEE,3,50,0
+Bristol,PROCESSFEE,4,19,0
+Bristol,PROCESSFEE,5,19,0
+Bristol,PROCESSFEE,6,31,0
+Bristol,PROCESSFEE,7,36,0
+Bristol,PROCESSFEE,8,35,0
+Bristol,PROCESSFEE,9,15,0
+Bristol,PROCESSFEE,10,14,0
+Bristol,REFERRAL,1,87,460
+Bristol,REFERRAL,2,51,260
+Bristol,REFERRAL,3,60,320
+Bristol,REFERRAL,4,49,245
+Bristol,REFERRAL,5,30,155
+Bristol,REFERRAL,6,34,175
+Bristol,REFERRAL,7,39,195
+Bristol,REFERRAL,8,31,155
+Bristol,REFERRAL,9,13,65
+Bristol,REFERRAL,10,22,110
+Bristol,SALENOVAT,1,1,5
+Bristol,SALENOVAT,2,2,4.7
+Bristol,SALENOVAT,3,8,15.8
+Bristol,SALENOVAT,4,7,21.03
+Bristol,SALENOVAT,5,3,4.2
+Bristol,SALENOVAT,6,6,16.1
+Bristol,SALENOVAT,7,4,5.91
+Bristol,SALENOVAT,8,6,5.1
+Bristol,SALENOVAT,9,2,3.5
+Bristol,SALEVAT,1,9,37.73
+Bristol,SALEVAT,2,6,4.66
+Bristol,SALEVAT,3,5,26.26
+Bristol,SALEVAT,4,2,3.92
+Bristol,SALEVAT,5,6,7.25
+Bristol,SALEVAT,6,6,34.59
+Bristol,SALEVAT,7,7,10.10
+Bristol,SALEVAT,8,2,6.75
+Bristol,SALEVAT,9,1,1.5
+Dorset,BFR,4,1,9
+Dorset,BFR,5,1,7
+Dorset,BFR,6,1,2
+Dorset,BFR,7,1,5
+Dorset,CHARGE,1,197,465.7
+Dorset,CHARGE,2,233,613.0
+Dorset,CHARGE,3,204,503.6
+Dorset,CHARGE,4,795,2021.8
+Dorset,CHARGE,5,1866,4410.7
+Dorset,CHARGE,6,1961,4780.1
+Dorset,CHARGE,7,2207,5067.5
+Dorset,CHARGE,8,1182,2770.5
+Dorset,CHARGE,9,1935,4200.7
+Dorset,CHARGE,10,641,1417.7
+Dorset,DAMAGE,2,1,8.99
+Dorset,DAMAGE,5,2,16.99
+Dorset,DAMAGE,6,6,35.99
+Dorset,DAMAGE,7,4,29.98
+Dorset,DAMAGE,9,4,25.99
+Dorset,DAMAGE,10,1,14.99
+Dorset,GROUP,6,1,0.2
+Dorset,GROUP,10,1,1.2
+Dorset,HOLD,2,10,10
+Dorset,HOLD,4,10,10
+Dorset,HOLD,5,18,18
+Dorset,HOLD,6,35,35
+Dorset,HOLD,7,2,2
+Dorset,HOLD,8,14,16
+Dorset,HOLD,9,7,7
+Dorset,HOLD,10,16,19
+Dorset,ILL,1,4,24
+Dorset,ILL,2,2,12
+Dorset,ILL,3,1,6
+Dorset,ILL,4,3,18
+Dorset,ILL,5,18,108
+Dorset,ILL,6,25,150
+Dorset,ILL,7,14,84
+Dorset,ILL,8,6,40
+Dorset,ILL,9,28,168
+Dorset,ILL,10,6,36
+Dorset,LOST,1,185,1034.5
+Dorset,LOST,2,305,1888
+Dorset,LOST,3,120,731.90
+Dorset,LOST,4,393,2029.97
+Dorset,LOST,5,645,3529.91
+Dorset,LOST,6,1089,5241.59
+Dorset,LOST,7,942,4824.92
+Dorset,LOST,8,463,2322.36
+Dorset,LOST,9,371,1892.94
+Dorset,LOST,10,191,965.99
+Dorset,LOSTCARD,1,5,10
+Dorset,LOSTCARD,2,1,2
+Dorset,LOSTCARD,3,3,6
+Dorset,LOSTCARD,4,8,16
+Dorset,LOSTCARD,5,8,16
+Dorset,LOSTCARD,6,19,38
+Dorset,LOSTCARD,7,32,62.2
+Dorset,LOSTCARD,8,8,16
+Dorset,LOSTCARD,9,15,30
+Dorset,LOSTCARD,10,4,8
+Dorset,OVERDUE,1,698,968.4
+Dorset,OVERDUE,2,844,1244.2
+Dorset,OVERDUE,3,662,920.1
+Dorset,OVERDUE,4,1725,2154.0
+Dorset,OVERDUE,5,3472,4659.05
+Dorset,OVERDUE,6,3566,4150.25
+Dorset,OVERDUE,7,3955,5358.0
+Dorset,OVERDUE,8,2345,2817.1
+Dorset,OVERDUE,9,2443,2680.5
+Dorset,OVERDUE,10,953,1165.5
+Dorset,PRIVILEGE,4,2,3.5
+Dorset,PRIVILEGE,5,12,32.35
+Dorset,PRIVILEGE,6,6,19.5
+Dorset,PRIVILEGE,7,1,2
+Dorset,PRIVILEGE,8,3,11.0
+Dorset,PRIVILEGE,9,2,2.4
+Dorset,PRIVILEGE,10,1,1
+Dorset,PROCESSFEE,2,10,0
+Dorset,PROCESSFEE,3,3,0
+Dorset,PROCESSFEE,4,6,7.99
+Dorset,PROCESSFEE,5,11,0
+Dorset,PROCESSFEE,6,21,0
+Dorset,PROCESSFEE,7,28,0
+Dorset,PROCESSFEE,8,18,0
+Dorset,PROCESSFEE,9,13,0
+Dorset,PROCESSFEE,10,7,0
+Dorset,SALENOVAT,2,2,0.6
+Dorset,SALENOVAT,4,1,1
+Dorset,SALENOVAT,5,2,0.7
+Dorset,SALENOVAT,6,1,2.5
+Dorset,SALENOVAT,7,1,1
+Dorset,SALEVAT,3,1,1.67
+Dorset,SALEVAT,7,1,0.08
+North Somerset,CHARGE,1,24,28
+North Somerset,CHARGE,2,19,26.0
+North Somerset,CHARGE,3,19,25.0
+North Somerset,CHARGE,4,27,33.2
+North Somerset,CHARGE,5,50,94.7
+North Somerset,CHARGE,6,75,94.8
+North Somerset,CHARGE,7,32,43.2
+North Somerset,CHARGE,8,63,94.5
+North Somerset,CHARGE,9,74,94.8
+North Somerset,CHARGE,10,19,25.5
+North Somerset,DAMAGE,8,1,10
+North Somerset,GROUP,4,1,6
+North Somerset,GROUP,10,2,22
+North Somerset,HOLD,1,3,3
+North Somerset,HOLD,2,2,1.5
+North Somerset,HOLD,3,6,6
+North Somerset,HOLD,4,3,3
+North Somerset,HOLD,5,39,39
+North Somerset,HOLD,6,13,19
+North Somerset,HOLD,7,16,16
+North Somerset,HOLD,8,113,95.0
+North Somerset,HOLD,9,53,50.0
+North Somerset,HOLD,10,2,2
+North Somerset,LOST,1,4,28
+North Somerset,LOST,2,6,45
+North Somerset,LOST,4,24,137
+North Somerset,LOST,5,24,96
+North Somerset,LOST,6,9,64
+North Somerset,LOST,7,12,85
+North Somerset,LOST,8,11,80
+North Somerset,LOST,9,15,90
+North Somerset,LOST,10,30,222
+North Somerset,LOSTCARD,1,1,1
+North Somerset,LOSTCARD,6,1,1
+North Somerset,LOSTCARD,7,1,1
+North Somerset,LOSTCARD,8,1,0.98
+North Somerset,OVERDUE,1,78,70.2
+North Somerset,OVERDUE,2,71,119.7
+North Somerset,OVERDUE,3,146,84.1
+North Somerset,OVERDUE,4,60,43.3
+North Somerset,OVERDUE,5,146,133.6
+North Somerset,OVERDUE,6,157,171.7
+North Somerset,OVERDUE,7,165,206.5
+North Somerset,OVERDUE,8,148,139.1
+North Somerset,OVERDUE,9,315,178.9
+North Somerset,OVERDUE,10,67,81.4
+North Somerset,PROCESSFEE,2,1,0
+North Somerset,PROCESSFEE,8,1,0
+North Somerset,PROCESSFEE,9,5,0
+North Somerset,SALENOVAT,7,1,2
+North Somerset,SALENOVAT,10,1,20
+Poole,CHARGE,1,40,62.0
+Poole,CHARGE,2,12,20.5
+Poole,CHARGE,3,12,16.5
+Poole,CHARGE,4,141,225.5
+Poole,CHARGE,5,30,43.0
+Poole,CHARGE,6,125,157.75
+Poole,CHARGE,7,16,24.5
+Poole,CHARGE,8,88,131.5
+Poole,CHARGE,9,5,8.5
+Poole,CHARGE,10,8,9.5
+Poole,HOLD,1,6,6
+Poole,HOLD,2,4,4
+Poole,HOLD,3,7,7
+Poole,HOLD,4,143,143
+Poole,HOLD,5,28,28
+Poole,HOLD,6,37,37
+Poole,HOLD,7,8,8
+Poole,HOLD,8,30,30
+Poole,HOLD,9,17,17
+Poole,HOLD,10,7,7
+Poole,LOSTCARD,7,1,2
+Poole,OVERDUE,1,10,8.1
+Poole,OVERDUE,2,17,30.9
+Poole,OVERDUE,3,56,72.4
+Poole,OVERDUE,4,139,284.7
+Poole,OVERDUE,5,70,92.0
+Poole,OVERDUE,6,111,176.2
+Poole,OVERDUE,7,67,114.1
+Poole,OVERDUE,8,86,132.2
+Poole,OVERDUE,9,62,52.4
+Poole,OVERDUE,10,26,23.4
+Somerset,BFR,1,37,304.03
+Somerset,BFR,2,8,96.92
+Somerset,BFR,3,50,447.54
+Somerset,BFR,4,16,121.46
+Somerset,BFR,5,11,157.15
+Somerset,BFR,6,25,249.82
+Somerset,BFR,7,7,81.05
+Somerset,BFR,8,2,15.99
+Somerset,BFR,9,28,207.54
+Somerset,BFR,10,12,124.23
+Somerset,CHARGE,1,1337,2963.00
+Somerset,CHARGE,2,589,1235.75
+Somerset,CHARGE,3,1761,3627.15
+Somerset,CHARGE,4,2650,5635.95
+Somerset,CHARGE,5,4990,10466.15
+Somerset,CHARGE,6,4802,9939.40
+Somerset,CHARGE,7,3150,6642.75
+Somerset,CHARGE,8,1881,3846.60
+Somerset,CHARGE,9,1672,3389.40
+Somerset,CHARGE,10,1659,3529.00
+Somerset,DAMAGE,1,3,17.45
+Somerset,DAMAGE,2,4,22
+Somerset,DAMAGE,3,9,42.38
+Somerset,DAMAGE,4,4,17.49
+Somerset,DAMAGE,5,10,73.92
+Somerset,DAMAGE,6,7,40
+Somerset,DAMAGE,7,12,72
+Somerset,DAMAGE,8,4,24.99
+Somerset,DAMAGE,9,6,28.20
+Somerset,DAMAGE,10,7,40
+Somerset,GROUP,1,7,34.9
+Somerset,GROUP,2,3,16.5
+Somerset,GROUP,3,13,45.65
+Somerset,GROUP,4,51,276.0
+Somerset,GROUP,5,160,857.4
+Somerset,GROUP,6,265,1464.3
+Somerset,GROUP,7,118,629.40
+Somerset,GROUP,8,85,467.5
+Somerset,GROUP,9,60,330.0
+Somerset,GROUP,10,90,495.0
+Somerset,HOLD,1,889,930.5
+Somerset,HOLD,2,354,375.5
+Somerset,HOLD,3,1076,1094.92
+Somerset,HOLD,4,2055,2132.0
+Somerset,HOLD,5,3773,3923.50
+Somerset,HOLD,6,5510,5828.5
+Somerset,HOLD,7,2715,2786.9
+Somerset,HOLD,8,2103,2221.0
+Somerset,HOLD,9,1677,1755.0
+Somerset,HOLD,10,1788,1866.0
+Somerset,ILL,1,2,8
+Somerset,ILL,3,2,8
+Somerset,ILL,4,1,4
+Somerset,ILL,5,8,32
+Somerset,ILL,6,1,4
+Somerset,ILL,7,7,28
+Somerset,ILL,9,1,4
+Somerset,LOST,1,113,848.41
+Somerset,LOST,2,131,804.0
+Somerset,LOST,3,261,1589.59
+Somerset,LOST,4,186,1109.98
+Somerset,LOST,5,516,3110.42
+Somerset,LOST,6,394,2225.58
+Somerset,LOST,7,319,2112.08
+Somerset,LOST,8,240,1427
+Somerset,LOST,9,162,899.88
+Somerset,LOST,10,124,675.99
+Somerset,LOSTCARD,1,26,52
+Somerset,LOSTCARD,2,44,88
+Somerset,LOSTCARD,3,93,186.5
+Somerset,LOSTCARD,4,66,132
+Somerset,LOSTCARD,5,124,248
+Somerset,LOSTCARD,6,116,232
+Somerset,LOSTCARD,7,65,130
+Somerset,LOSTCARD,8,56,112
+Somerset,LOSTCARD,9,37,73
+Somerset,LOSTCARD,10,40,79
+Somerset,OVERDUE,1,1741,2346.25
+Somerset,OVERDUE,2,1424,1740.55
+Somerset,OVERDUE,3,4130,4416.65
+Somerset,OVERDUE,4,4331,4369.55
+Somerset,OVERDUE,5,10726,11425.55
+Somerset,OVERDUE,6,10988,11407.35
+Somerset,OVERDUE,7,7572,7350.15
+Somerset,OVERDUE,8,4962,5211.95
+Somerset,OVERDUE,9,3987,4149.95
+Somerset,OVERDUE,10,4436,4314.90
+Somerset,PRIVILEGE,3,1,5
+Somerset,PRIVILEGE,5,2,22.15
+Somerset,PRIVILEGE,6,1,27.5
+Somerset,PROCESSFEE,1,26,0
+Somerset,PROCESSFEE,2,24,4
+Somerset,PROCESSFEE,3,59,4
+Somerset,PROCESSFEE,4,17,0
+Somerset,PROCESSFEE,5,101,0
+Somerset,PROCESSFEE,6,122,0
+Somerset,PROCESSFEE,7,59,0
+Somerset,PROCESSFEE,8,76,0
+Somerset,PROCESSFEE,9,43,0
+Somerset,PROCESSFEE,10,42,0
+Somerset,SALENOVAT,1,2,8.8
+Somerset,SALENOVAT,2,2,52.3
+Somerset,SALENOVAT,3,12,139.1
+Somerset,SALENOVAT,4,13,30.6
+Somerset,SALENOVAT,5,6,8.2
+Somerset,SALENOVAT,6,18,444.84
+Somerset,SALENOVAT,7,7,16.88
+Somerset,SALENOVAT,8,4,16.95
+Somerset,SALENOVAT,9,4,4.20
+Somerset,SALENOVAT,10,4,7.65
+Somerset,SALEVAT,1,9,11.70
+Somerset,SALEVAT,2,2,15.95
+Somerset,SALEVAT,3,10,21.98
+Somerset,SALEVAT,4,7,5.48
+Somerset,SALEVAT,5,12,35.27
+Somerset,SALEVAT,6,15,26.31
+Somerset,SALEVAT,7,3,57.33
+Somerset,SALEVAT,8,6,7.54
+Somerset,SALEVAT,9,3,15.75
+Somerset,SALEVAT,10,5,42.52
+South Gloucestershire,CHARGE,1,20,23.4
+South Gloucestershire,CHARGE,2,220,236.9
+South Gloucestershire,CHARGE,3,96,105.4
+South Gloucestershire,CHARGE,4,176,207.4
+South Gloucestershire,CHARGE,5,195,280.0
+South Gloucestershire,CHARGE,6,283,381.6
+South Gloucestershire,CHARGE,7,155,202.5
+South Gloucestershire,CHARGE,8,182,247.8
+South Gloucestershire,CHARGE,9,121,142.2
+South Gloucestershire,CHARGE,10,35,47.6
+South Gloucestershire,GROUP,3,1,10
+South Gloucestershire,GROUP,9,6,24
+South Gloucestershire,GROUP,10,5,20
+South Gloucestershire,HOLD,1,8,8.1
+South Gloucestershire,HOLD,2,57,59.3
+South Gloucestershire,HOLD,3,13,12.8
+South Gloucestershire,HOLD,4,24,24.8
+South Gloucestershire,HOLD,5,114,91.5
+South Gloucestershire,HOLD,6,112,86.0
+South Gloucestershire,HOLD,7,186,221.9
+South Gloucestershire,HOLD,8,127,126.2
+South Gloucestershire,HOLD,9,55,49.9
+South Gloucestershire,HOLD,10,16,15.7
+South Gloucestershire,LOST,1,16,72
+South Gloucestershire,LOST,2,91,570
+South Gloucestershire,LOST,3,49,299.99
+South Gloucestershire,LOST,4,36,247
+South Gloucestershire,LOST,5,122,623
+South Gloucestershire,LOST,6,83,460
+South Gloucestershire,LOST,7,213,1065.97
+South Gloucestershire,LOST,8,111,591
+South Gloucestershire,LOST,9,50,286
+South Gloucestershire,LOST,10,20,114
+South Gloucestershire,LOSTCARD,7,1,0.5
+South Gloucestershire,OVERDUE,1,75,74.9
+South Gloucestershire,OVERDUE,2,297,486.5
+South Gloucestershire,OVERDUE,3,187,284.8
+South Gloucestershire,OVERDUE,4,319,351.1
+South Gloucestershire,OVERDUE,5,268,395.6
+South Gloucestershire,OVERDUE,6,275,386.9
+South Gloucestershire,OVERDUE,7,476,578.6
+South Gloucestershire,OVERDUE,8,358,540.8
+South Gloucestershire,OVERDUE,9,157,150.2
+South Gloucestershire,OVERDUE,10,87,127.9
+South Gloucestershire,PRIVILEGE,8,1,0.1
+South Gloucestershire,PROCESSFEE,5,1,0
+South Gloucestershire,PROCESSFEE,6,2,0
+South Gloucestershire,PROCESSFEE,8,1,0
+South Gloucestershire,PROCESSFEE,9,1,0
+South Gloucestershire,SALENOVAT,2,1,1
+South Gloucestershire,SALENOVAT,4,2,3.9
+South Gloucestershire,SALENOVAT,7,2,7.75
+South Gloucestershire,SALENOVAT,9,1,4
+South Gloucestershire,SALEVAT,2,1,0.5
+South Gloucestershire,SALEVAT,3,1,2.92
+South Gloucestershire,SALEVAT,4,2,2.33
+South Gloucestershire,SALEVAT,6,1,2.25
+South Gloucestershire,SALEVAT,7,1,0.08
+South Gloucestershire,SALEVAT,9,1,0.08
