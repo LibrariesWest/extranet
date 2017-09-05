@@ -1,6 +1,4 @@
-﻿var rootdataurl = '/wp-content/uploads/dashboard/';
-
-jQuery('.data-link').attr('href', rootdataurl + jQuery('.data-link').attr('href'));
+﻿var rootdataurl = '/data/';
 
 var colours = {
     'Bath and North East Somerset': { colour: [255, 99, 132] },
@@ -22,6 +20,16 @@ var libtoauth = {
     'BS': 'Bristol'
 };
 
+var authlongtoshort = {
+    'Bath and North East Somerset': 'BN',
+    'Somerset': 'SO',
+    'North Somerset': 'NS',
+    'South Gloucestershire': 'SG',
+    'Dorset': 'DO',
+    'Poole': 'PO',
+    'Bristol': 'BS'
+};
+
 // Bills URLs
 var billsbydeprivationurl = rootdataurl + 'bills_billsbydeprivation.csv';
 var billsbyreasonauthorityurl = rootdataurl + 'bills_billsbyreasonauthority.csv';
@@ -29,8 +37,11 @@ var billsbyreasonlibraryurl = rootdataurl + 'bills_billsbyreasonlibrary.csv';
 var paymentsbyauthorityurl = rootdataurl + 'bills_paymentsbyauthority.csv';
 var paymentsbylibraryurl = rootdataurl + 'bills_paymentsbylibrary.csv';
 
-// Usage URLs
+jQuery(function () {
+    jQuery('.data-link').attr('href', rootdataurl + jQuery('.data-link').attr('href'));
 
+});
 
-// Movement URLs
-
+var getRndInteger = function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};

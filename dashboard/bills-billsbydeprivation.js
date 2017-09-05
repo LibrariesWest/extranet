@@ -5,21 +5,23 @@ jQuery(function () {
         complete: function (results) {
             var authorities = {};
             var datasets = [];
-            var labels = [];
+            var labels = [1,2,3,4,5,6,7,8,9,10];
             var tabledata = [];
 
             jQuery.each(results.data, function (i, r) {
-                if (labels.indexOf(r.imd_decile) == -1 && r.reason) labels.push(r.imd_decile);
-                if (!authorities[r.authority] && r.authority != '') authorities[r.authority] = [];
-                if (r.authority != '' && r.number_of_bills != '') authorities[r.authority].push(r.number_of_bills);
-                if (r.authority != '' && r.number_of_bills != '') tabledata.push([r.authority, r.reason, r.imd_decile, r.number_of_bills, r.total_billed]);
+                if (r.authority == '') return true;
+                if (!authorities[r.authority]) authorities[r.authority] = {};
+                if (authorities[r.authority] && !authorities[r.authority][r.imd_decile]) authorities[r.authority][r.imd_decile] = 0;
+                authorities[r.authority][r.imd_decile] = authorities[r.authority][r.imd_decile] + parseInt(r.number_of_bills);
+                tabledata.push([r.authority, r.reason, r.imd_decile, r.number_of_bills, r.total_billed]);
             });
 
             jQuery.each(Object.keys(authorities), function (i, a) {
-
                 var linecolour = 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',1)';
                 var bgcolour = 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',0.2)';
-                datasets.push({ label: a, data: authorities[a], borderWidth: 1, borderColor: linecolour, backgroundColor: bgcolour });
+                var data = [];
+                for (x = 0; x < labels.length; x++) data.push(authorities[a][labels[x]] || 0);
+                datasets.push({ label: a, data: data, borderWidth: 1, borderColor: linecolour, backgroundColor: bgcolour });
             });
 
             var chI = document.getElementById("cht-bills-billsbydeprivation");

@@ -3,25 +3,34 @@ jQuery(function () {
         header: true,
         download: true,
         complete: function (results) {
-            var libraries = {};
+            var reasons = {};
             var datasets = [];
             var labels = [];
             var tabledata = [];
+            var libs = {};
 
             jQuery.each(results.data, function (i, r) {
-                if (labels.indexOf(r.reason) == -1 && r.reason) labels.push(r.reason);
-                if (!libraries[r.library] && r.library != '') libraries[r.library] = [];
-                if (r.library != '' && r.number_of_bills != '') libraries[r.library].push(r.number_of_bills);
-                if (r.library && r.library != '' && r.number_of_bills != '') tabledata.push([r.library, r.reason, r.number_of_bills, r.total_billed]);
+                if (r.library == '') return true;
+                if (!libs[r.library]) libs[r.library] = 0;
+                libs[r.library] = libs[r.library] + parseInt(r.number_of_bills);
+                if (!reasons[r.reason]) reasons[r.reason] = {};
+                if (!reasons[r.reason][r.library]) reasons[r.reason][r.library] = parseInt(r.number_of_bills);
+                tabledata.push([r.authority, r.reason, r.number_of_bills, r.total_billed]);
             });
 
-            jQuery.each(Object.keys(libraries), function (i, a) {
-                var auth = libtoauth[a.substring(0, 2)];
-                var total = 0;
-                for (var i in libraries[a]) { total += parseInt(libraries[a][i]); }
-                var linecolour = colours[auth] ? 'rgba(' + colours[auth].colour[0] + ',' + colours[auth].colour[1] + ',' + colours[auth].colour[2] + ',1)' : '#ccc';
-                var bgcolour = colours[auth] ? 'rgba(' + colours[auth].colour[0] + ',' + colours[auth].colour[1] + ',' + colours[auth].colour[2] + ',0.2)' : '#ccc';
-                if (total > 20000) datasets.push({ label: a, data: libraries[a], borderWidth: 1, borderColor: linecolour, backgroundColor: bgcolour });
+            jQuery.each(Object.keys(libs), function (i, l) {
+                if (libs[l] > 10000) labels.push(l);
+            });
+
+            jQuery.each(Object.keys(reasons), function (i, a) {
+                var r = getRndInteger(0, 6);
+                var auth = Object.keys(colours)[r];
+                var c = colours[auth];
+                var linecolour = 'rgba(' + c.colour[0] + ',' + c.colour[1] + ',' + c.colour[2] + ',1)';
+                var bgcolour = 'rgba(' + c.colour[0] + ',' + c.colour[1] + ',' + c.colour[2] + ',0.2)';
+                var data = [];
+                for (x = 0; x < labels.length; x++) data.push(reasons[a][labels[x]]);
+                datasets.push({ label: a, data: data, borderWidth: 1, borderColor: linecolour, backgroundColor: bgcolour });
             });
 
             var chI = document.getElementById('cht-bills-billsbyreasonlibrary');

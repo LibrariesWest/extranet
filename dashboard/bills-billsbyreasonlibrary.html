@@ -9,9 +9,11 @@
 <body>
     <div class="container">
         <h1>Bills By Reason and Library</h1>
-        <p>Bills incurred in last year, grouped by bill reason, billing authority, and library.  Libraries with over 20,000 bills shown in chart.</p>
+        <p>Bills incurred in last year, grouped by bill reason, billing authority, and library.  Libraries with over 10,000 bills shown in chart.</p>
         <hr />
         <canvas id="cht-bills-billsbyreasonlibrary" height="75"></canvas>
+        <hr />
+        <table id="tbl-bills-billsbyreasonlibrary"></table>
         <hr />
         <table>
             <thead>
@@ -39,8 +41,6 @@
                 </tr>
             </tbody>
         </table>
-        <hr />
-        <table id="tbl-bills-billsbyreasonlibrary"></table>
     </div>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
