@@ -4,16 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bills By Reason | Bills</title>
+    <title>Payments By Authority | Payments</title>
 </head>
 <body>
     <div class="container">
-        <h1>Bills By Reason and Authority</h1>
-        <p>Bills incurred in last year, grouped by bill reason and billing authority.  </p>
+        <h1>Payments By Authority</h1>
+        <p>Payments taken in last year, grouped by authority paid and payment type</p>
         <hr />
-        <div class="container"><canvas id="cht-bills-billsbyreasonauthority" height="75"></canvas></div>
-        <hr />
-        <table id="tbl-bills-billsbyreasonauthority"></table>
+        <canvas id="cht-bills-paymentsbyauthority" height="75"></canvas>
         <hr />
         <table>
             <thead>
@@ -25,22 +23,24 @@
             <tbody>
                 <tr>
                     <td>Authority</td>
-                    <td>The authority that the bill is assigned to</td>
+                    <td>The authority that took the payment</td>
+                </tr>
+                <tr>55
+                    <td>Payment Type</td>
+                    <td>The payment type used e.g. 'Cash'. Remember that 'Cancelled' and 'Forgiven' are also payment types</td>
                 </tr>
                 <tr>
-                    <td>Reason</td>
-                    <td>The reason for the bill e.g. Overdue</td>
+                    <td>Number of payments</td>
+                    <td>The number of payments that make up this grouping</td>
                 </tr>
                 <tr>
-                    <td>Number of bills</td>
-                    <td>The number of bills that make up this grouping</td>
-                </tr>
-                <tr>
-                    <td>Total billed</td>
-                    <td>The total amount billed in this grouping</td>
+                    <td>Total paid</td>
+                    <td>The total amount paid in this grouping</td>
                 </tr>
             </tbody>
         </table>
+        <hr />
+        <table id="tbl-bills-paymentsbyauthority"></table>
     </div>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
@@ -50,6 +50,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.2.0/papaparse.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script src="chart-config.js"></script>
-    <script src="bills-billsbyreasonauthority.js"></script>
+    <script src="bills-paymentsbyauthority.js"></script>
 </body>
 </html>
