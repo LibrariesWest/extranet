@@ -4,6 +4,13 @@ jQuery(function () {
         download: true,
         complete: function (results) {
             var authorities = {};
+            var itemcats = {
+                AV: ['AV', 'AUDIO', 'DVD_EX', 'DVD_18_PR', 'DVD_U_ST', 'DVD_15_PR', 'MUS_CD', 'DVD_15_ST',
+                    'VISUAL', 'DVD_U_PR', 'CSPW', 'DVD_BX_12', 'DVD_BX_15', 'DVD_PG_ST', 'DVD_BX_U', 'DVD_12_PR',
+                    'DVD_BX_EX', 'DVD_PG_PR', 'DVD_18_ST', 'DVD_12_ST', 'ASPW', 'DVD_BX_PG', 'DVD_BX_18'],
+                Other: ['CH_FIC', 'NEW-BOOK', 'B-O-P','LP_NF', 'FAST','ADU_GRN', 'REF-BOOK','CH_REF',
+                    'ADU_FIC','LANG', 'YA_FIC', 'BOOK', 'ADU_REF', 'LP_FIC', 'ADU_NF', 'YA_NF', 'CH_NF']
+            };
             var datasets = [];
             var labels = [];
             var tabledata = [];
@@ -16,7 +23,6 @@ jQuery(function () {
             });
 
             jQuery.each(Object.keys(authorities), function (i, a) {
-
                 var linecolour = 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',1)';
                 var bgcolour = 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',0.2)';
                 datasets.push({ label: a, data: authorities[a], borderWidth: 1, borderColor: linecolour, backgroundColor: bgcolour });

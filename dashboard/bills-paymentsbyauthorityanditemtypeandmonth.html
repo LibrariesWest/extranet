@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Payments By Authority | Payments</title>
+    <title>Payments by authority, item type, and month | Payments</title>
 </head>
 <body>
     <div class="container">
-        <h1>Payments By Authority</h1>
-        <p>Payments taken in last year, grouped by authority paid and payment type</p>
+        <h1>Payments by authority, item type, and month</h1>
+        <p>Payments taken in last year, grouped by authority paid, item type, and month the payment was taken. This data can be useful in seeing what item types are causing payments to be taken. It also includes item authority as well as payment authority so can be used for calculating interlending charges between authorities.</p>
         <hr />
-        <canvas id="cht-bills-paymentsbyauthority" height="75"></canvas>
+        <canvas id="cht-bills-paymentsbyauthorityanditemtypeandmonth" height="75"></canvas>
         <hr />
         <table>
             <thead>
@@ -22,10 +22,26 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Authority</td>
+                    <td>Payment Authority</td>
                     <td>The authority that took the payment</td>
                 </tr>
-                <tr>55
+                <tr>
+                    <td>Payment Month</td>
+                    <td>The month that payment was taken</td>
+                </tr>
+                <tr>
+                    <td>Item Authority</td>
+                    <td>The authority that owns the item that the bill was related to</td>
+                </tr>
+                <tr>
+                    <td>Item Type</td>
+                    <td>The type of item that the bill was related to.</td>
+                </tr>
+                <tr>
+                    <td>Reason</td>
+                    <td>The reason for the bill e.g. Overdue</td>
+                </tr>
+                <tr>
                     <td>Payment Type</td>
                     <td>The payment type used e.g. 'Cash'. Remember that 'Cancelled' and 'Forgiven' are also payment types</td>
                 </tr>
@@ -40,7 +56,7 @@
             </tbody>
         </table>
         <hr />
-        <table id="tbl-bills-paymentsbyauthority"></table>
+        <table id="tbl-bills-paymentsbyauthorityanditemtypeandmonth"></table>
     </div>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
@@ -50,6 +66,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.2.0/papaparse.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script src="chart-config.js"></script>
-    <script src="bills-paymentsbyauthority.js"></script>
+    <script src="bills-paymentsbyauthorityanditemtypeandmonth.js"></script>
 </body>
 </html>

@@ -4,14 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Payments By Authority | Payments</title>
+    <title>Payments by authority | Payments</title>
 </head>
 <body>
     <div class="container">
-        <h1>Payments By Authority</h1>
-        <p>Payments taken in last year, grouped by authority paid and payment type</p>
+        <h1>Payments by authority</h1>
+        <p>Payments taken in last year, grouped by authority paid and payment type. This shows the amount being taken by each authority in payments, but also by the different payment types (e.g. CASH). It will also show, from FORGIVEN and CANCELLED payments, income that isn't been taken for these reasons.</p>
         <hr />
         <canvas id="cht-bills-paymentsbyauthority" height="75"></canvas>
+        <hr />
+        <table id="tbl-bills-paymentsbyauthority"></table>
         <hr />
         <table>
             <thead>
@@ -25,7 +27,7 @@
                     <td>Authority</td>
                     <td>The authority that took the payment</td>
                 </tr>
-                <tr>55
+                <tr>
                     <td>Payment Type</td>
                     <td>The payment type used e.g. 'Cash'. Remember that 'Cancelled' and 'Forgiven' are also payment types</td>
                 </tr>
@@ -39,8 +41,6 @@
                 </tr>
             </tbody>
         </table>
-        <hr />
-        <table id="tbl-bills-paymentsbyauthority"></table>
     </div>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">

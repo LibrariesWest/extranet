@@ -12,7 +12,7 @@ jQuery(function () {
                 if (r.authority == '') return true;
                 if (!authorities[r.authority]) authorities[r.authority] = {};
                 if (authorities[r.authority] && !authorities[r.authority][r.imd_decile]) authorities[r.authority][r.imd_decile] = 0;
-                authorities[r.authority][r.imd_decile] = authorities[r.authority][r.imd_decile] + parseInt(r.number_of_bills);
+                authorities[r.authority][r.imd_decile] = authorities[r.authority][r.imd_decile] + parseInt(r.total_billed);
                 tabledata.push([r.authority, r.reason, r.imd_decile, r.number_of_bills, r.total_billed]);
             });
 
@@ -35,7 +35,7 @@ jQuery(function () {
                     animation: { animateScale: true },
                     scales: {
                         xAxes: [{ scaleLabel: { display: true, labelString: 'Index of Multiple Deprivation (1-10)' } }],
-                        yAxes: [{ scaleLabel: { display: true, labelString: 'Number of bills' } }]
+                        yAxes: [{ scaleLabel: { display: true, labelString: 'Value of bills (pounds)' } }]
                     },
                     title: { display: true, text: 'Multiple deprivation index by number of bills' }
                 }

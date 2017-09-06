@@ -14,7 +14,7 @@ jQuery(function () {
                 if (!libs[r.library]) libs[r.library] = 0;
                 libs[r.library] = libs[r.library] + parseInt(r.number_of_bills);
                 if (!reasons[r.reason]) reasons[r.reason] = {};
-                if (!reasons[r.reason][r.library]) reasons[r.reason][r.library] = parseInt(r.number_of_bills);
+                if (!reasons[r.reason][r.library]) reasons[r.reason][r.library] = parseInt(r.total_billed);
                 tabledata.push([r.authority, r.reason, r.number_of_bills, r.total_billed]);
             });
 
@@ -40,19 +40,22 @@ jQuery(function () {
                     labels: labels,
                     datasets: datasets
                 },
-                scales: {
-                    xAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Reason'
-                        }
-                    }],
-                    yAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Number of bills'
-                        }
-                    }]
+                options: {
+                    scales: {
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Library'
+                            }
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Value of bills (pounds)'
+                            }
+                        }]
+                    },
+                    title: { display: true, text: 'Value of bills by reason and library (for biggest libraries)' }
                 }
             });
 

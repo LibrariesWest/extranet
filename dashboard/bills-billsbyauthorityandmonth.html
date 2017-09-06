@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bills By Deprivation | Bills</title>
+    <title>Bills by authority and month | Bills</title>
 </head>
 <body>
     <div class="container">
-        <h1>Bills by authority per month</h1>
-        <p>Bills incurred in last year, grouped by billing authority and month. This data shows how many bills are being incurred throughout the course of a year.</p>
+        <h1>Bills by authority and month</h1>
+        <p>Bills incurred in last year, grouped by billing authority and month. This data shows how many bills are being incurred throughout the course of a year and the value of those bills. The graph shows bill totals for just the previous 6 months. This is bill data, without payments, so the value totals do not reflect total income as many bills will be unpaid.</p>
         <hr />
-        <canvas id="cht-bills-billsbydeprivation" height="75"></canvas>
+        <canvas id="cht-bills-billsbyauthorityandmonth" height="100"></canvas>
         <hr />
-        <table id="tbl-bills-billsbydeprivation"></table>
+        <table id="tbl-bills-billsbyauthorityandmonth"></table>
         <hr />
         <table>
             <thead>
@@ -28,12 +28,8 @@
                     <td>The authority that the bill is assigned to</td>
                 </tr>
                 <tr>
-                    <td>Reason</td>
-                    <td>The reason for the bill e.g. Overdue</td>
-                </tr>
-                <tr>
-                    <td>Multiple Deprivation decile</td>
-                    <td>An estimated index of multiple deprivation for the users. This is a value taken from the user home address and is a deprivation estimation of 1-10. 1 being most deprived, 10 being the least</td>
+                    <td>Month</td>
+                    <td>The month the bill was generated.  For example, if overdue, this is the month the book was returned.</td>
                 </tr>
                 <tr>
                     <td>Number of bills</td>
@@ -54,6 +50,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.2.0/papaparse.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script src="chart-config.js"></script>
-    <script src="bills-billsbydeprivation.js"></script>
+    <script src="bills-billsbyauthorityandmonth.js"></script>
 </body>
 </html>

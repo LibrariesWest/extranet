@@ -31,6 +31,8 @@ var authlongtoshort = {
 };
 
 // Bills URLs
+var billsbyauthorityandmonthurl = rootdataurl + 'bills_billsbyauthorityandmonth.csv';
+var billsbyauthorityandmonthunpaidurl = rootdataurl + 'bills_billsbyauthorityandmonthunpaid.csv';
 var billsbydeprivationurl = rootdataurl + 'bills_billsbydeprivation.csv';
 var billsbyreasonauthorityurl = rootdataurl + 'bills_billsbyreasonauthority.csv';
 var billsbyreasonlibraryurl = rootdataurl + 'bills_billsbyreasonlibrary.csv';

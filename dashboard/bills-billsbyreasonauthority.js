@@ -16,7 +16,7 @@ jQuery(function () {
                 var authcode = authlongtoshort[r.authority];
                 if (r.authority == '') return true;
                 if (!reasons[r.reason]) reasons[r.reason] = {};
-                if (!reasons[r.reason][authcode]) reasons[r.reason][authcode] = parseInt(r.number_of_bills);
+                if (!reasons[r.reason][authcode]) reasons[r.reason][authcode] = parseInt(r.total_billed);
                 tabledata.push([r.authority, r.reason, r.number_of_bills, r.total_billed]);
             });
 
@@ -38,19 +38,22 @@ jQuery(function () {
                     labels: labels,
                     datasets: datasets
                 },
-                scales: {
-                    xAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Reason'
-                        }
-                    }],
-                    yAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Number of bills'
-                        }
-                    }]
+                options: {
+                    scales: {
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Authority'
+                            }
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Value of bills (pounds)'
+                            }
+                        }]
+                    },
+                    title: { display: true, text: 'Value of bills by authority and bill reason' }
                 }
             });
 

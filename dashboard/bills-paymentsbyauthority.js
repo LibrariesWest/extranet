@@ -11,12 +11,11 @@ jQuery(function () {
             jQuery.each(results.data, function (i, r) {
                 if (labels.indexOf(r.payment_type) == -1 && r.payment_type) labels.push(r.payment_type);
                 if (!authorities[r.authority] && r.authority != '') authorities[r.authority] = [];
-                if (r.authority != '' && r.number_of_payments != '') authorities[r.authority].push(r.number_of_payments);
+                if (r.authority != '' && r.number_of_payments != '') authorities[r.authority].push(r.total_paid);
                 tabledata.push([r.authority, r.payment_type, r.number_of_payments, r.total_paid]);
             });
 
             jQuery.each(Object.keys(authorities), function (i, a) {
-
                 var linecolour = 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',1)';
                 var bgcolour = 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',0.2)';
                 datasets.push({ label: a, data: authorities[a], borderWidth: 1, borderColor: linecolour, backgroundColor: bgcolour });
@@ -29,19 +28,22 @@ jQuery(function () {
                     labels: labels,
                     datasets: datasets
                 },
-                scales: {
-                    xAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Payment Type'
-                        }
-                    }],
-                    yAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Number of payments'
-                        }
-                    }]
+                options: {
+                    scales: {
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Payment Type'
+                            }
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Number of payments'
+                            }
+                        }]
+                    },
+                    title: { display: true, text: 'Value of payments by authority and payment type' }
                 }
             });
 
