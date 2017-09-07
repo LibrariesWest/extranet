@@ -10,16 +10,16 @@ jQuery(function () {
             var libs = {};
 
             jQuery.each(results.data, function (i, r) {
-                if (r.library == '') return true;
-                if (!libs[r.library]) libs[r.library] = 0;
-                libs[r.library] = libs[r.library] + parseInt(r.number_of_bills);
+                if (r.bill_authority == '') return true;
+                if (!libs[r.bill_library]) libs[r.bill_library] = 0;
+                libs[r.bill_library] = libs[r.bill_library] + parseInt(r.number_of_bills);
                 if (!reasons[r.reason]) reasons[r.reason] = {};
-                if (!reasons[r.reason][r.library]) reasons[r.reason][r.library] = parseInt(r.total_billed);
-                tabledata.push([r.authority, r.reason, r.number_of_bills, r.total_billed]);
+                if (!reasons[r.reason][r.bill_library]) reasons[r.reason][r.bill_library] = parseInt(r.total_billed);
+                tabledata.push([r.bill_authority, r.bill_library, r.reason, r.number_of_bills, r.total_billed]);
             });
 
             jQuery.each(Object.keys(libs), function (i, l) {
-                if (libs[l] > 10000) labels.push(l);
+                if (libs[l] > 15000) labels.push(l);
             });
 
             jQuery.each(Object.keys(reasons), function (i, a) {
@@ -62,6 +62,7 @@ jQuery(function () {
             $('#tbl-bills-billsbyreasonlibrary').DataTable({
                 data: tabledata,
                 columns: [
+                    { title: 'Authority' },
                     { title: 'Library' },
                     { title: 'Reason' },
                     { title: 'Number of bills' },

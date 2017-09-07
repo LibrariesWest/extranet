@@ -13,11 +13,11 @@ jQuery(function () {
             });
 
             jQuery.each(results.data, function (i, r) {
-                var authcode = authlongtoshort[r.authority];
-                if (r.authority == '') return true;
+                var authcode = authlongtoshort[r.bill_authority];
+                if (r.bill_authority == '') return true;
                 if (!reasons[r.reason]) reasons[r.reason] = {};
                 if (!reasons[r.reason][authcode]) reasons[r.reason][authcode] = parseInt(r.total_billed);
-                tabledata.push([r.authority, r.reason, r.number_of_bills, r.total_billed]);
+                tabledata.push([r.bill_authority, r.reason, r.number_of_bills, r.total_billed]);
             });
 
             jQuery.each(Object.keys(reasons), function (i, a) {

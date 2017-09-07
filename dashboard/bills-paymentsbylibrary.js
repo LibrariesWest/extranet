@@ -3,22 +3,34 @@ jQuery(function () {
         header: true,
         download: true,
         complete: function (results) {
-            var libraries = {};
+            var paymenttypes = {};
             var datasets = [];
             var labels = [];
             var tabledata = [];
+            var libs = {};
 
             jQuery.each(results.data, function (i, r) {
-                if (labels.indexOf(r.payment_type) == -1 && r.payment_type) labels.push(r.payment_type);
-                if (!libraries[r.library] && r.library != '') libraries[r.library] = [];
-                if (r.library != '' && r.number_of_payments != '') libraries[r.library].push(r.total_paid);
+                if (r.payment_type == '' || r.library == '') return true;
+                if (!libs[r.library]) libs[r.library] = 0;
+                libs[r.library] = libs[r.library] + parseInt(r.total_paid);
+                if (!paymenttypes[r.payment_type]) paymenttypes[r.payment_type] = {};
+                if (!paymenttypes[r.payment_type][r.library]) paymenttypes[r.payment_type][r.library] = parseInt(r.total_paid);
                 tabledata.push([r.authority, r.library, r.payment_type, r.number_of_payments, r.total_paid]);
             });
 
-            jQuery.each(Object.keys(libraries), function (i, a) {
-                var linecolour = 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',1)';
-                var bgcolour = 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',0.2)';
-                datasets.push({ label: a, data: libraries[a], borderWidth: 1, borderColor: linecolour, backgroundColor: bgcolour });
+            jQuery.each(Object.keys(libs), function (i, l) {
+                if (libs[l] > 20000) labels.push(l);
+            });
+
+            jQuery.each(Object.keys(paymenttypes), function (i, a) {
+                var r = getRndInteger(0, 6);
+                var auth = Object.keys(colours)[r];
+                var c = colours[auth];
+                var linecolour = 'rgba(' + c.colour[0] + ',' + c.colour[1] + ',' + c.colour[2] + ',1)';
+                var bgcolour = 'rgba(' + c.colour[0] + ',' + c.colour[1] + ',' + c.colour[2] + ',0.2)';
+                var data = [];
+                for (x = 0; x < labels.length; x++) data.push(paymenttypes[a][labels[x]]);
+                datasets.push({ label: a, data: data, borderWidth: 1, borderColor: linecolour, backgroundColor: bgcolour });
             });
 
             var chI = document.getElementById('cht-bills-paymentsbylibrary');
@@ -33,17 +45,17 @@ jQuery(function () {
                         xAxes: [{
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Payment Type'
+                                labelString: 'Library'
                             }
                         }],
                         yAxes: [{
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Number of payments'
+                                labelString: 'Value of payments (pounds)'
                             }
                         }]
                     },
-                    title: { display: true, text: 'Value of payments by library and payment type' }
+                    title: { display: true, text: 'Value of payments by type and library (for biggest libraries)' }
                 }
             });
 
@@ -52,7 +64,7 @@ jQuery(function () {
                 columns: [
                     { title: 'Authority' },
                     { title: 'Library' },
-                    { title: 'Payment type' },
+                    { title: 'Payment Type' },
                     { title: 'Number of payments' },
                     { title: 'Total paid' }
                 ]

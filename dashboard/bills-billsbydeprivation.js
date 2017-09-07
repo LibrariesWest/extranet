@@ -9,11 +9,11 @@ jQuery(function () {
             var tabledata = [];
 
             jQuery.each(results.data, function (i, r) {
-                if (r.authority == '') return true;
-                if (!authorities[r.authority]) authorities[r.authority] = {};
-                if (authorities[r.authority] && !authorities[r.authority][r.imd_decile]) authorities[r.authority][r.imd_decile] = 0;
-                authorities[r.authority][r.imd_decile] = authorities[r.authority][r.imd_decile] + parseInt(r.total_billed);
-                tabledata.push([r.authority, r.reason, r.imd_decile, r.number_of_bills, r.total_billed]);
+                if (r.bill_authority == '') return true;
+                if (!authorities[r.bill_authority]) authorities[r.bill_authority] = {};
+                if (authorities[r.bill_authority] && !authorities[r.bill_authority][r.imd_decile]) authorities[r.bill_authority][r.imd_decile] = 0;
+                authorities[r.bill_authority][r.imd_decile] = authorities[r.bill_authority][r.imd_decile] + parseInt(r.total_billed);
+                tabledata.push([r.bill_authority, r.reason, r.imd_decile, r.number_of_bills, r.total_billed]);
             });
 
             jQuery.each(Object.keys(authorities), function (i, a) {
