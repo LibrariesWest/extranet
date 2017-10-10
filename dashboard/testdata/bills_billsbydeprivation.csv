@@ -1,4 +1,4 @@
-authority,reason,imd_decile,number_of_bills,total_billed
+bill_authority,reason,imd_decile,number_of_bills,total_billed
 Bath and North East Somerset,Overdue,1,10,100
 Somerset,Overdue,1,10,100
 North Somerset,Overdue,1,10,100

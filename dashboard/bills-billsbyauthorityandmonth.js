@@ -9,14 +9,14 @@ jQuery(function () {
             var tabledata = [];
 
             jQuery.each(results.data, function (i, r) {
-                if (r.authority == '') return true;
-                if (labels.indexOf(r.month) == -1) labels.push(r.month);
-                if (!authorities[r.authority]) authorities[r.authority] = {};
-                if (authorities[r.authority] && !authorities[r.authority][r.month]) authorities[r.authority][r.month] = r.total_billed;
-                tabledata.push([r.authority, r.month, r.number_of_bills, r.total_billed]);
+                if (r.bill_authority == '') return true;
+                if (labels.indexOf(r.bill_month) == -1) labels.push(r.bill_month);
+                if (!authorities[r.bill_authority]) authorities[r.bill_authority] = {};
+                if (authorities[r.bill_authority] && !authorities[r.bill_authority][r.bill_month]) authorities[r.bill_authority][r.bill_month] = r.total_billed;
+                tabledata.push([r.bill_authority, r.bill_month, r.number_of_bills, r.total_billed]);
             });
 
-            labels = labels.sort().slice(Math.max(labels.labels - 6, 1));
+            labels = labels.sort().slice(Math.max(labels.length - 6, 1));
 
             jQuery.each(Object.keys(authorities), function (i, a) {
                 var linecolour = 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',1)';

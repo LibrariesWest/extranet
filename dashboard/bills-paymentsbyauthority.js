@@ -39,7 +39,7 @@ jQuery(function () {
                         yAxes: [{
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Number of payments'
+                                labelString: 'Value of payments (pounds)'
                             }
                         }]
                     },

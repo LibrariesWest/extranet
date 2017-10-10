@@ -1,0 +1,3 @@
+payment_authority,payment_month,item_authority,item_type,reason,payment_type,number_of_payments,total_paid
+Bath and North East Somerset,201709,Bath and North East Somerset,ADU_FIC,OVERDUE,CASH,5,5.25
+South Gloucestershire,201709,Bristol,FAST,OVERDUE,CASH,1,0.3

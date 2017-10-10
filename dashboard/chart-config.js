@@ -37,6 +37,7 @@ var billsbydeprivationurl = rootdataurl + 'bills_billsbydeprivation.csv';
 var billsbyreasonauthorityurl = rootdataurl + 'bills_billsbyreasonauthority.csv';
 var billsbyreasonlibraryurl = rootdataurl + 'bills_billsbyreasonlibrary.csv';
 var paymentsbyauthorityurl = rootdataurl + 'bills_paymentsbyauthority.csv';
+var paymentsbyauthorityanditemtypeandmonthurl = rootdataurl + 'bills_paymentsbyauthorityanditemtypeandmonth.csv';
 var paymentsbylibraryurl = rootdataurl + 'bills_paymentsbylibrary.csv';
 
 jQuery(function () {

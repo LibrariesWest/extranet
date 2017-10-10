@@ -9,13 +9,13 @@ jQuery(function () {
             var tabledata = [];
 
             jQuery.each(results.data, function (i, r) {
-                if (r.authority == '') return true;
-                var year = r.month.substring(0, 4);
+                if (r.bill_authority == '') return true;
+                var year = r.bill_month.substring(0, 4);
                 if (labels.indexOf(year) == -1) labels.push(year);
-                if (!authorities[r.authority]) authorities[r.authority] = {};
-                if (authorities[r.authority] && !authorities[r.authority][year]) authorities[r.authority][year] = 0;
-                authorities[r.authority][year] = authorities[r.authority][year] + parseInt(r.total_billed);
-                tabledata.push([r.authority, r.month, r.number_of_bills, r.total_billed]);
+                if (!authorities[r.bill_authority]) authorities[r.bill_authority] = {};
+                if (authorities[r.bill_authority] && !authorities[r.bill_authority][year]) authorities[r.bill_authority][year] = 0;
+                authorities[r.bill_authority][year] = authorities[r.bill_authority][year] + parseInt(r.total_billed);
+                tabledata.push([r.bill_authority, r.bill_month, r.number_of_bills, r.total_billed]);
             });
 
             labels = labels.sort();
