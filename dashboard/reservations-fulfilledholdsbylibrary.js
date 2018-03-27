@@ -9,21 +9,21 @@ jQuery(function () {
         'South Gloucestershire': { line: '#000A8B', background: '#000A8B' },
         'Dorset': { line: '#EF9B1F', background: '#EF9B1F' },
         'Poole': { line: '#0094AA', background: '#0094AA' },
-        'Bristol': { line: '#FFCC00', background: '#FFCC00' } 
+        'Bristol': { line: '#FFCC00', background: '#FFCC00' }
     };
 
     var residentsurl = rootdataurl + 'residentusers.csv';
 
     Papa.parse(residentsurl, {
         download: true,
-        complete: function(results) {
+        complete: function (results) {
             var data = [];
             var labels = [];
-            jQuery.each(results.data, function(i, r){
+            jQuery.each(results.data, function (i, r) {
                 if (r[0]) labels.push(r[0]);
                 if (r[3]) data.push(r[3]);
             });
-            
+
             var chI = document.getElementById("cht-residents");
             var chtIssues = new Chart(chI, {
                 type: 'bar',

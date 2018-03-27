@@ -1,5 +1,5 @@
 jQuery(function () {
-    Papa.parse(rootdataurl + 'bills_billsbyauthorityandmonth.csv', {
+    Papa.parse(rootdataurl + 'membership_registrationsbyweek.csv', {
         header: true,
         download: true,
         complete: function (results) {
@@ -26,7 +26,7 @@ jQuery(function () {
                 datasets.push({ label: a, data: data, borderWidth: 1, borderColor: linecolour, backgroundColor: bgcolour });
             });
 
-            var chI = document.getElementById("cht-bills-billsbyauthorityandmonth");
+            var chI = document.getElementById("cht-membership-registrationsbyweek");
             var cht = new Chart(chI, {
                 type: 'bar',
                 data: {

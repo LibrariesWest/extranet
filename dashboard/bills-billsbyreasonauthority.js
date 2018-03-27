@@ -1,5 +1,5 @@
 jQuery(function () {
-    Papa.parse(billsbyreasonauthorityurl, {
+    Papa.parse(rootdataurl + 'bills_billsbyreasonauthority.csv', {
         header: true,
         download: true,
         complete: function (results) {
@@ -57,7 +57,7 @@ jQuery(function () {
                 }
             });
 
-            $('#tbl-bills-billsbyreasonauthority').DataTable({
+            jQuery('#tbl-bills-billsbyreasonauthority').DataTable({
                 data: tabledata,
                 columns: [
                     { title: 'Authority' },

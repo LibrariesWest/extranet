@@ -4,26 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Transits by item type and authority | Movement</title>
+    <title>LibrariesWest Data</title>
 </head>
 <body>
     <div class="container">
-        <h1>Transits by item type and authority</h1>
-        <p>Number of items currently in transit, by item type and from authority</p>
-        <hr />
-        <canvas id="cht-movement-transitsbyitemauthority" height="100"></canvas>
-        <hr />
-        <table id="tbl-movement-transitsbyitemauthority"></table>
-        <hr />
-        <table>
-            <thead>
-                <tr>
-                    <th>Column</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+        <h3>Registrations by week</h3>
+        <p>Displays number of new membership registrations per library per week. The chart shows the last six weeks. The full data includes the last two years.</p>
+        <canvas id="cht-membership-registrationsbyweek" height="100"></canvas>
+        <table id="tbl-membership-registrationsbyweek"></table>
     </div>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
@@ -33,6 +21,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.2.0/papaparse.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script src="chart-config.js"></script>
-    <script src="movement-transitsbyitemauthority.js"></script>
+    <script src="membership-registrationsbyweek.js"></script>
 </body>
 </html>

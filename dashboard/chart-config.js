@@ -20,6 +20,14 @@ var libtoauth = {
     'BS': 'Bristol'
 };
 
+var itemcats = {
+    'Audio/Visual': ['AV', 'AUDIO', 'DVD_EX', 'DVD_18_PR', 'DVD_U_ST', 'DVD_15_PR', 'MUS_CD', 'DVD_15_ST',
+        'VISUAL', 'DVD_U_PR', 'CSPW', 'DVD_BX_12', 'DVD_BX_15', 'DVD_PG_ST', 'DVD_BX_U', 'DVD_12_PR',
+        'DVD_BX_EX', 'DVD_PG_PR', 'DVD_18_ST', 'DVD_12_ST', 'ASPW', 'DVD_BX_PG', 'DVD_BX_18'],
+    'Books and other': ['CH_FIC', 'NEW-BOOK', 'B-O-P', 'LP_NF', 'FAST', 'ADU_GRN', 'REF-BOOK', 'CH_REF',
+        'ADU_FIC', 'LANG', 'YA_FIC', 'BOOK', 'ADU_REF', 'LP_FIC', 'ADU_NF', 'YA_NF', 'CH_NF']
+};
+
 var authlongtoshort = {
     'Bath and North East Somerset': 'BN',
     'Somerset': 'SO',
@@ -30,19 +38,10 @@ var authlongtoshort = {
     'Bristol': 'BS'
 };
 
-// Bills URLs
-var billsbyauthorityandmonthurl = rootdataurl + 'bills_billsbyauthorityandmonth.csv';
-var billsbyauthorityandmonthunpaidurl = rootdataurl + 'bills_billsbyauthorityandmonthunpaid.csv';
-var billsbydeprivationurl = rootdataurl + 'bills_billsbydeprivation.csv';
-var billsbyreasonauthorityurl = rootdataurl + 'bills_billsbyreasonauthority.csv';
-var billsbyreasonlibraryurl = rootdataurl + 'bills_billsbyreasonlibrary.csv';
-var paymentsbyauthorityurl = rootdataurl + 'bills_paymentsbyauthority.csv';
-var paymentsbyauthorityanditemtypeandmonthurl = rootdataurl + 'bills_paymentsbyauthorityanditemtypeandmonth.csv';
-var paymentsbylibraryurl = rootdataurl + 'bills_paymentsbylibrary.csv';
-
 jQuery(function () {
-    jQuery('.data-link').attr('href', rootdataurl + jQuery('.data-link').attr('href'));
-
+    jQuery.each(jQuery('.data-link'), function () {
+        jQuery(this).attr('href', rootdataurl + jQuery(this).attr('href'));
+    });
 });
 
 var getRndInteger = function (min, max) {

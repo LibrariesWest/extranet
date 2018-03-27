@@ -1,5 +1,5 @@
 jQuery(function () {
-    Papa.parse(paymentsbyauthorityurl, {
+    Papa.parse(rootdataurl + 'bills_paymentsbyauthority.csv', {
         header: true,
         download: true,
         complete: function (results) {
@@ -9,6 +9,7 @@ jQuery(function () {
             var tabledata = [];
 
             jQuery.each(results.data, function (i, r) {
+                if (r.authority == '') return true;
                 if (labels.indexOf(r.payment_type) == -1 && r.payment_type) labels.push(r.payment_type);
                 if (!authorities[r.authority] && r.authority != '') authorities[r.authority] = [];
                 if (r.authority != '' && r.number_of_payments != '') authorities[r.authority].push(r.total_paid);

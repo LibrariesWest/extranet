@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Transits by item type and authority | Movement</title>
+    <title>Daily totals | Cash</title>
 </head>
 <body>
     <div class="container">
-        <h1>Transits by item type and authority</h1>
-        <p>Number of items currently in transit, by item type and from authority</p>
+        <h1>Daily cash totals</h1>
+        <p>Daily cash totals taken per library</p>
         <hr />
-        <canvas id="cht-movement-transitsbyitemauthority" height="100"></canvas>
+        <canvas id="cht-bills-paymentsbylibrary" height="100"></canvas>
         <hr />
-        <table id="tbl-movement-transitsbyitemauthority"></table>
+        <table id="tbl-bills-paymentsbylibrary"></table>
         <hr />
         <table>
             <thead>
@@ -22,7 +22,28 @@
                     <th>Description</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+                <tr>
+                    <td>Authority</td>
+                    <td>The authority that took the payment</td>
+                </tr>
+                <tr>
+                    <td>Library</td>
+                    <td>The library that took the payment</td>
+                </tr>
+                <tr>
+                    <td>Payment Type</td>
+                    <td>The payment type used e.g. 'Cash'. Remember that 'Cancelled' and 'Forgiven' are also payment types</td>
+                </tr>
+                <tr>
+                    <td>Number of payments</td>
+                    <td>The number of payments that make up this grouping</td>
+                </tr>
+                <tr>
+                    <td>Total paid</td>
+                    <td>The total amount paid in this grouping</td>
+                </tr>
+            </tbody>
         </table>
     </div>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -33,6 +54,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.2.0/papaparse.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script src="chart-config.js"></script>
-    <script src="movement-transitsbyitemauthority.js"></script>
+    <script src="bills-paymentsbylibrary.js"></script>
 </body>
 </html>

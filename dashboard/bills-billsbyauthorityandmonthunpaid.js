@@ -1,5 +1,5 @@
 jQuery(function () {
-    Papa.parse(billsbyauthorityandmonthunpaidurl, {
+    Papa.parse(rootdataurl + 'bills_billsbyauthorityandmonthunpaid.csv', {
         header: true,
         download: true,
         complete: function (results) {
@@ -45,7 +45,7 @@ jQuery(function () {
                 }
             });
 
-            $('#tbl-bills-billsbyauthorityandmonthunpaid').DataTable({
+            jQuery('#tbl-bills-billsbyauthorityandmonthunpaid').DataTable({
                 data: tabledata,
                 columns: [
                     { title: 'Authority' },

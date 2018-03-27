@@ -1,66 +1,67 @@
 jQuery(function () {
-
-    var rootdataurl = 'data/';
-
-    var colours = {
-        'Bath and North East Somerset': { line: '#25A445', background: '#25A445' },
-        'Somerset': { line: '#B80050', background: '#B80050' },
-        'North Somerset': { line: '#CEF5F2', background: '#CEF5F2' },
-        'South Gloucestershire': { line: '#000A8B', background: '#000A8B' },
-        'Dorset': { line: '#EF9B1F', background: '#EF9B1F' },
-        'Poole': { line: '#0094AA', background: '#0094AA' },
-        'Bristol': { line: '#FFCC00', background: '#FFCC00' } 
-    };
-
-    var issuesurl = rootdataurl + 'issues.csv';
-    var holdsurl = rootdataurl + 'holds.csv';
-    var residentsurl = rootdataurl + 'residentusers.csv';
-
-    Papa.parse(issuesurl, {
+    Papa.parse(rootdataurl + 'collection_itemsbytypeandauthority.csv', {
+        header: true,
         download: true,
-        complete: function(results) {
-            var authorities = {};
+        complete: function (results) {
             var datasets = [];
-            var labels = [];
-            
-            jQuery.each(results.data, function(i, r){
-                if (labels.indexOf(r[1]) == -1 && r[1]) labels.push(r[1]);
-                if (!authorities[r[0]] && r[0] != '') authorities[r[0]] = [];
-                if (r[0] != '' && r[2] != '') authorities[r[0]].push(r[2]);
+            var item_types = {};
+            var labels = Object.keys(itemcats);
+            var tabledata = [];
+            var authorities = {};
+
+            jQuery.each(results.data, function (i, r) {
+                if (r.authority == '') return true;
+                if (!authorities[r.authority]) authorities[r.authority] = {};
+                if (!authorities[r.authority][r.item_type]) authorities[r.authority][r.item_type] = parseInt(r.number_of_items);
+                tabledata.push([r.authority, r.item_type, r.number_of_items]);
             });
 
-            jQuery.each(Object.keys(authorities), function(i, a){
-                datasets.push({ label: a, data: authorities[a], fill: false, borderColor: (colours[a].line || '#ccc'), backgroundColor: (colours[a].line || '#ccc') });
+            jQuery.each(Object.keys(authorities), function (i, a) {
+                var linecolour = 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',1)';
+                var bgcolour = 'rgba(' + colours[a].colour[0] + ',' + colours[a].colour[1] + ',' + colours[a].colour[2] + ',0.2)';
+                var data = $.map(labels, function (l, i) {
+                    var sum = 0;
+                    $.each(authorities[a], function (z, i) {
+                        if (itemcats[l].indexOf(z) != -1) sum = sum + i;
+                    });
+                    return sum || 0;
+                });
+                datasets.push({ label: a, data: data, borderWidth: 1, borderColor: linecolour, backgroundColor: bgcolour });
             });
 
-            var chI = document.getElementById("cht-issues");
-            var chtIssues = new Chart(chI, {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: datasets
-                }
-            });
-        }
-    });
-
-    Papa.parse(residentsurl, {
-        download: true,
-        complete: function(results) {
-            var data = [];
-            var labels = [];
-            jQuery.each(results.data, function(i, r){
-                if (r[0]) labels.push(r[0]);
-                if (r[3]) data.push(r[3]);
-            });
-            
-            var chI = document.getElementById("cht-residents");
-            var chtIssues = new Chart(chI, {
+            var chI = document.getElementById('cht-collection-itemsbytypeandauthority');
+            var cht = new Chart(chI, {
                 type: 'bar',
                 data: {
                     labels: labels,
-                    datasets: [{ data: data }]
+                    datasets: datasets
+                },
+                options: {
+                    scales: {
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Item type category'
+                            }
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Number of items'
+                            }
+                        }]
+                    },
+                    title: { display: true, text: 'Number of items by type and authority' }
                 }
+            });
+
+            jQuery('#tbl-collection-itemsbytypeandauthority').DataTable({
+                data: tabledata,
+                columns: [
+                    { title: 'Authority' },
+                    { title: 'Item type' },
+                    { title: 'Number of items' }
+                ]
             });
         }
     });
