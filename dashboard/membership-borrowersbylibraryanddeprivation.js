@@ -1,37 +1,16 @@
 jQuery(function () {
 
-    var rootdataurl = 'data/';
+	var rootdataurl = 'data/';
+	var lsoa_data_url = rootdataurl + 'membership_borrowersbylibraryanddeprivation_geo.geojson';
 
-    var colours = {
-        'Bath and North East Somerset': { line: '#25A445', background: '#25A445' },
-        'Somerset': { line: '#B80050', background: '#B80050' },
-        'North Somerset': { line: '#CEF5F2', background: '#CEF5F2' },
-        'South Gloucestershire': { line: '#000A8B', background: '#000A8B' },
-        'Dorset': { line: '#EF9B1F', background: '#EF9B1F' },
-        'Poole': { line: '#0094AA', background: '#0094AA' },
-        'Bristol': { line: '#FFCC00', background: '#FFCC00' } 
-    };
+	// Number of issues by Ward.
+	L.mapbox.accessToken = 'pk.eyJ1IjoiZHhyb3dlIiwiYSI6ImNqMnI5Y2p2cDAwMHQzMm11cjZlOGQ2b2oifQ.uxhJoz3QCO6cARRQ8uKdzw';
+	var map = L.mapbox.map('map-borrowers-lsoa', 'mapbox.light').setView([50.97, -2.76], 8);
 
-    var residentsurl = rootdataurl + 'residentusers.csv';
+	var wards = L.mapbox.featureLayer()
+		.loadURL(lsoa_data_url)
+		.on('ready', function () {
+		})
+		.addTo(map);
 
-    Papa.parse(residentsurl, {
-        download: true,
-        complete: function(results) {
-            var data = [];
-            var labels = [];
-            jQuery.each(results.data, function(i, r){
-                if (r[0]) labels.push(r[0]);
-                if (r[3]) data.push(r[3]);
-            });
-            
-            var chI = document.getElementById("cht-residents");
-            var chtIssues = new Chart(chI, {
-                type: 'bar',
-                data: {
-                    labels: labels,
-                    datasets: [{ data: data }]
-                }
-            });
-        }
-    });
 });
