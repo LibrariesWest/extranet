@@ -59,17 +59,17 @@ jQuery(function () {
             jQuery('#tbl-movement-transitsoversixweeks').DataTable({
                 data: tabledata,
                 columns: [
-                    { title: 'Date sent' },
-                    { title: 'Item ID' },
+                    { title: 'Date' },
+                    { title: 'ID' },
                     { title: 'Title' },
                     { title: 'Author' },
-                    { title: 'Shelving key' },
-                    { title: 'Item type' },
-                    { title: 'Home location' },
-                    { title: 'From library' },
-                    { title: 'From authority' },
-                    { title: 'To library' },
-                    { title: 'To authority' }
+                    { title: 'Call' },
+                    { title: 'Type' },
+                    { title: 'Home' },
+                    { title: 'From lib' },
+                    { title: 'From auth' },
+                    { title: 'To lib' },
+                    { title: 'To auth' }
                 ]
             });
         }
